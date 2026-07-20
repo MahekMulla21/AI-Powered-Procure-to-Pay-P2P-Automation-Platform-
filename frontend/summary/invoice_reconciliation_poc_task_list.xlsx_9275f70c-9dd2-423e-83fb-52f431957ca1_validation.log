@@ -1,0 +1,11 @@
+File Name: invoice_reconciliation_poc_task_list.xlsx
+Status: INVALID
+Reason: Invalid file type
+============================================================
+DQ-001 | File Type Check | FAIL | Invalid file type
+DQ-002 | File Size Check | PASS | OK
+DQ-003 | Readability | WARNING | Skipped
+DQ-005 | Text Extraction | WARNING | Not applicable
+DQ-006 | Minimum Content | WARNING | Not applicable
+DQ-007 | Noise Check | WARNING | Not applicable
+DQ-008 | Image Quality | WARNING | Not applicable

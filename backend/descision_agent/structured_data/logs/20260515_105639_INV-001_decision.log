@@ -1,0 +1,34 @@
+Invoice Decision Log
+==================================================
+Invoice   : INV-001
+File ID   : 757
+Timestamp : 20260515_105639
+Verdict   : APPROVED
+Confidence: 60%
+Summary   : System approved: PO, PR, MSA, and SOW references validated successfully (AI verdict timed out).
+==================================================
+No rejection reasons.
+==================================================
+Signals:
+  po_found                 : True
+  po_status                : APPROVED - ISSUED
+  po_date_valid            : True
+  amount_within_po         : True
+  vendor_match             : True
+  pr_found                 : True
+  pr_status                : Pending
+  msa_found                : True
+  msa_status               : Active
+  msa_valid                : True
+  sow_found                : True
+  sow_status               : Active
+  sow_date_valid           : True
+  amount_within_sow        : True
+  client_name              : saudi telecom company (stc)
+  grn_reference            : GRN-001
+  msa_reference            : MSA-TCS-STC-2024-001
+  sow_reference            : SOW-TCS-STC-DM-2024-001
+  po_reference             : PO-STC-IT-2024-0047
+  vendor_name              : tata consultancy services ltd. (tcs)
+  po_links_msa             : MSA-TCS-STC-2024-001
+  po_links_sow             : SOW-TCS-STC-DM-2024-001

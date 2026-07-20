@@ -1,0 +1,30 @@
+{
+  "structured_fields": {
+    "invoice_number": "INV-CM-2024-0312",
+    "vendor_name": "CloudMinds Pvt. Ltd.",
+    "invoice_date": "March 05, 2024",
+    "due_date": "April 04, 2024",
+    "po_reference": "PO-2024-08821",
+    "grn_reference": "GRN-2024-0089",
+    "hsn_code": "998313",
+    "quantity": "1 LS",
+    "unit_price": "45,000.00",
+    "total_amount": "45,000.00",
+    "tax": "IGST @ 0% = 0.00 USD",
+    "currency": "USD - US Dollar",
+    "company_code": "IN-PUN-001",
+    "status": "Verified",
+    "tax_breakup": "{'Tax Component': ['IGST', 'CGST', 'SGST'], \n'Rate': [0%, N/A, N/A], \n'Taxable Amount (USD)': [45,000.00, N/A, N/A], \n'Tax Amount (USD)': [0.00, N/A, N/A]}",
+    "bank_details": "{'bank_name': 'HDFC Bank', 'account_name': 'CloudMinds Pvt. Ltd.', 'account_no': '00012345678901', 'ifsc': 'HDFC0001234', 'swift': 'HDFCINBB'}"
+  },
+  "unstructured_fields": {
+    "description_of_service": "The service provided is a Cloud Readiness Assessment, which was delivered as part of Milestone M1. The assessment resulted in a Cloud Readiness Report v1.0, which was accepted on February 28, 2024, with reference NOVATECH-ACC-2024-021. This milestone marks the first deliverable under the contract, and it sets the stage for subsequent milestones to be completed."
+  },
+  "metadata": {
+    "source_file": "C:\\Users\\ws_htu2013\\Desktop\\invoice_extractor\\backend\\data\\Invoice_CloudMinds_NovaTech_2024_updated_v1.pdf",
+    "ocr_char_count": 3002,
+    "faiss_chunks": 5,
+    "vocab_size": 650,
+    "llm_model": "llama3"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "structured_fields": {
+    "invoice_number": "INV-NC-2024-0101",
+    "vendor_name": "NexaCore Technologies Pvt. Ltd.",
+    "invoice_date": "April 27, 2024",
+    "due_date": "May 27, 2024",
+    "po_reference": "PO-2024-09015",
+    "grn_reference": "GRN",
+    "hsn_code": "998313",
+    "quantity": "1 LS",
+    "unit_price": "52,000.00",
+    "total_amount": "USD 241,900.00",
+    "tax": "Here are the extracted values:\n\n* IGST: 0%, Amount: 0.00 USD\n* CGST: 9%, Amount: 18,450.00 USD\n* SGST: 9%, Amount: 18,450.00 USD",
+    "currency": "USD",
+    "company_code": "NexaCore Technologies Pvt. Ltd.",
+    "status": "All Milestones – Full",
+    "tax_breakup": "{\n    \"component\": [\"IGST\", \"CGST\", \"SGST\"],\n    \"rate\": [0%, 9%, 9%],\n    \"taxable_amount\": [\"205,000.00\", \"205,000.00\", \"205,000.00\"],\n    \"tax_amount\": [\"0.00\", \"18,450.00\", \"18,450.00\"]\n}",
+    "bank_details": "{'bank_name': 'HDFC Bank', 'account_name': 'NexaCore Technologies Pvt. Ltd.', 'account_no': '00098765432100', 'ifsc': 'HDFC0005678', 'swift': 'HDFCINBB'}"
+  },
+  "unstructured_fields": {
+    "description_of_service": "[LLM ERROR] timed out"
+  },
+  "metadata": {
+    "source_file": "C:\\Users\\ws_htu2012\\Desktop\\Integeration_code_MSA&IN\\Integeration_code 1\\Integeration_code\\Integeration_code\\frontend\\input\\success\\1777957000_Invoice_NexaCore_Pinnacle_2024_1_20260505_102640.pdf",
+    "ocr_char_count": 3869,
+    "faiss_chunks": 7,
+    "vocab_size": 840,
+    "llm_model": "llama3",
+    "file_id": "21"
+  }
+}

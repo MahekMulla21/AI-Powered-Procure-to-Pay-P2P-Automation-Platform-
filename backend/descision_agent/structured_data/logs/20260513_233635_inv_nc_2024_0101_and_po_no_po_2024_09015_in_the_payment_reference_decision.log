@@ -1,0 +1,33 @@
+Invoice Decision Log
+==================================================
+Invoice   : inv nc 2024 0101 and po no po 2024 09015 in the payment reference
+File ID   : 629
+Timestamp : 20260513_233635
+Verdict   : REJECTED
+Confidence: 100%
+Summary   : PO_NOT_FOUND: Purchase Order 'po 2024 09015 in the payment reference' not found in po_dataset.
+==================================================
+Rejection Reasons (1):
+  1. [PO_NOT_FOUND] po_reference_number = po 2024 09015 in the payment reference
+     Purchase Order 'po 2024 09015 in the payment reference' not found in po_dataset.
+==================================================
+Signals:
+  po_found                 : False
+  po_status                : None
+  po_date_valid            : False
+  amount_within_po         : False
+  vendor_match             : None
+  pr_found                 : False
+  pr_status                : None
+  msa_found                : False
+  msa_status               : None
+  msa_valid                : False
+  sow_found                : False
+  sow_status               : None
+  amount_within_sow        : False
+  client_name              : not provided
+  grn_reference            : is required before payment processing vendor must receive grn from pinnacle digital corp
+  msa_reference            : not provided
+  sow_reference            : not provided
+  po_reference             : po 2024 09015 in the payment reference
+  vendor_name              : nexacore technologies pvt. ltd.

@@ -1,0 +1,37 @@
+Invoice Decision Log
+==================================================
+Invoice   : IT-2024-0047
+File ID   : 663
+Timestamp : 20260514_153934
+Verdict   : REJECTED
+Confidence: 100%
+Summary   : VENDOR_MISMATCH: Vendor on invoice 'This Invoice is issued by Tata Consultancy Services Limited (TCS) to Saudi Telecom Company (STC) for services delivered under Milestone 1 (M1 – Discovery & Assessment) of the Purchase Order PO-STC-IT-2024-0047, issued under MSA-TCS-STC-2024-001 and SOW-TCS-STC-DM-2024-001.' does not match PO vendor 'Tata Consultancy Services Ltd. (TCS)'.
+==================================================
+Rejection Reasons (2):
+  1. [VENDOR_MISMATCH] vendor_name = This Invoice is issued by Tata Consultancy Services Limited (TCS) to Saudi Telecom Company (STC) for services delivered under Milestone 1 (M1 – Discovery & Assessment) of the Purchase Order PO-STC-IT-2024-0047, issued under MSA-TCS-STC-2024-001 and SOW-TCS-STC-DM-2024-001.
+     Vendor on invoice 'This Invoice is issued by Tata Consultancy Services Limited (TCS) to Saudi Telecom Company (STC) for services delivered under Milestone 1 (M1 – Discovery & Assessment) of the Purchase Order PO-STC-IT-2024-0047, issued under MSA-TCS-STC-2024-001 and SOW-TCS-STC-DM-2024-001.' does not match PO vendor 'Tata Consultancy Services Ltd. (TCS)'.
+  2. [SOW_INACTIVE] sow_id = SOW-TCS-STC-DM-2024-001
+     SOW 'SOW-TCS-STC-DM-2024-001' status='Active' end=2025-01-31.
+==================================================
+Signals:
+  po_found                 : True
+  po_status                : APPROVED - ISSUED
+  po_date_valid            : True
+  amount_within_po         : False
+  vendor_match             : False
+  pr_found                 : False
+  pr_status                : None
+  msa_found                : True
+  msa_status               : Active
+  msa_valid                : True
+  sow_found                : True
+  sow_status               : Active
+  amount_within_sow        : False
+  client_name              : not provided
+  grn_reference            : GRN-001
+  msa_reference            : MSA-TCS-STC-2024-001
+  sow_reference            : not provided
+  po_reference             : PO-STC-IT-2024-0047
+  vendor_name              : this invoice is issued by tata consultancy services limited (tcs) to saudi telecom company (stc) for services delivered under milestone 1 (m1 – discovery & assessment) of the purchase order po-stc-it-2024-0047, issued under msa-tcs-stc-2024-001 and sow-tcs-stc-dm-2024-001.
+  po_links_msa             : MSA-TCS-STC-2024-001
+  po_links_sow             : SOW-TCS-STC-DM-2024-001

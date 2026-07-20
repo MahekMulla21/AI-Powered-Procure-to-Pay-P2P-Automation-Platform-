@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>ClearView | Document Intelligence Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Inter',sans-serif}
+body{background:linear-gradient(135deg,#050505 0%,#0d1117 50%,#111827 100%);color:#fff;min-height:100vh;padding:28px 20px}
+.container{width:100%;max-width:960px;margin:0 auto}
+
+/* Brand */
+.brand{text-align:center;margin-bottom:28px}
+.brand h1{font-size:2.8rem;font-weight:800;background:linear-gradient(90deg,#fbbf24,#f59e0b,#d97706);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
+.brand p{color:#9ca3af;margin-top:6px;font-size:.95rem}
+
+/* Tabs */
+.tabs{display:flex;gap:8px;margin-bottom:24px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:6px}
+.tab-btn{flex:1;padding:12px 16px;border:none;border-radius:10px;font-size:.9rem;font-weight:600;cursor:pointer;transition:.25s;color:#9ca3af;background:transparent}
+.tab-btn.active{background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#000}
+.tab-btn:hover:not(.active){background:rgba(255,255,255,.07);color:#fff}
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* Card */
+.card{background:rgba(255,255,255,.055);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:28px;box-shadow:0 8px 32px rgba(0,0,0,.4)}
+h2{text-align:center;margin-bottom:22px;font-size:1.6rem;font-weight:700}
+
+/* Drop zone */
+.drop-zone{border:2px dashed rgba(251,191,36,.45);border-radius:14px;padding:44px 20px;text-align:center;cursor:pointer;transition:.3s;background:rgba(255,255,255,.02)}
+.drop-zone:hover,.drop-zone.dragover{border-color:#fbbf24;background:rgba(251,191,36,.07)}
+.drop-zone p{font-size:1.05rem;color:#d1d5db}
+.drop-zone .hint{font-size:.8rem;color:#6b7280;margin-top:6px}
+input[type=file]{display:none}
+
+/* File list */
+.file-list{margin-top:18px}
+.file-item{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.05);padding:11px 15px;margin-bottom:8px;border-radius:10px;border-left:4px solid #fbbf24}
+.file-info{display:flex;flex-direction:column}
+.file-name{font-weight:600;font-size:.9rem}
+.file-size{font-size:.78rem;color:#9ca3af}
+.remove-btn{background:#7f1d1d;color:#fca5a5;border:none;padding:6px 11px;cursor:pointer;border-radius:7px;font-size:.8rem}
+
+/* Actions */
+.actions{display:flex;gap:10px;margin-top:18px}
+button{flex:1;padding:13px;border:none;border-radius:10px;font-weight:700;cursor:pointer;transition:.25s;font-size:.9rem}
+#uploadBtn{background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#000}
+#clearBtn{background:rgba(255,255,255,.08);color:#d1d5db;border:1px solid rgba(255,255,255,.1)}
+button:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 4px 15px rgba(251,191,36,.3)}
+button:disabled{opacity:.45;cursor:not-allowed;transform:none}
+
+/* Progress */
+.progress-container{margin-top:18px}
+.progress-bar{height:8px;background:#1f2937;border-radius:20px;overflow:hidden}
+.progress-fill{height:100%;width:0%;background:linear-gradient(90deg,#fbbf24,#f59e0b);transition:width .35s}
+.progress-text{margin-top:9px;text-align:center;color:#9ca3af;font-size:.85rem}
+
+/* Toast */
+.toast{padding:11px 14px;margin-top:8px;border-radius:9px;animation:fadeIn .3s ease;font-size:.88rem}
+.success{background:rgba(34,197,94,.15);border-left:4px solid #22c55e}
+.error{background:rgba(239,68,68,.15);border-left:4px solid #ef4444}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── Invoice Decision Tab ─────────────────────────── */
+#inv-file-name{margin-top:12px;font-size:.85rem;color:#fbbf24;text-align:center;min-height:20px}
+#runDecisionBtn{background:linear-gradient(135deg,#6366f1,#4f46e5);color:#fff;margin-top:14px;flex:unset;width:100%}
+#runDecisionBtn:hover:not(:disabled){box-shadow:0 4px 20px rgba(99,102,241,.4)}
+
+/* Steps */
+.steps{display:flex;gap:0;margin:20px 0;overflow:hidden;border-radius:10px}
+.step{flex:1;padding:10px 6px;text-align:center;font-size:.75rem;font-weight:600;color:#6b7280;background:rgba(255,255,255,.04);border-right:1px solid rgba(255,255,255,.06);transition:.4s;position:relative}
+.step:last-child{border-right:none}
+.step .num{display:block;font-size:1.1rem;margin-bottom:3px}
+.step.active{color:#fbbf24;background:rgba(251,191,36,.1)}
+.step.done{color:#22c55e;background:rgba(34,197,94,.08)}
+.step.done .num::after{content:" ✓"}
+
+/* Spinner */
+.spinner{display:inline-block;width:18px;height:18px;border:2px solid rgba(251,191,36,.25);border-top-color:#fbbf24;border-radius:50%;animation:spin .7s linear infinite;vertical-align:middle;margin-right:8px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Verdict panel */
+#verdictPanel{display:none;margin-top:20px}
+.verdict-badge{display:flex;align-items:center;justify-content:center;gap:12px;padding:18px;border-radius:14px;font-size:1.5rem;font-weight:800;margin-bottom:18px;letter-spacing:.5px}
+.badge-approved{background:rgba(34,197,94,.15);border:2px solid #22c55e;color:#4ade80}
+.badge-rejected{background:rgba(239,68,68,.15);border:2px solid #ef4444;color:#f87171}
+.badge-review{background:rgba(251,191,36,.12);border:2px solid #fbbf24;color:#fbbf24}
+
+/* Confidence bar */
+.conf-wrap{margin-bottom:18px}
+.conf-label{display:flex;justify-content:space-between;font-size:.82rem;color:#9ca3af;margin-bottom:6px}
+.conf-bar{height:10px;background:#1f2937;border-radius:20px;overflow:hidden}
+.conf-fill{height:100%;border-radius:20px;transition:width .7s ease}
+
+/* Summary */
+.summary-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:14px 16px;margin-bottom:18px;font-size:.88rem;color:#d1d5db;line-height:1.6}
+
+/* Signals grid */
+.signals-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;margin-bottom:18px}
+.signal-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:9px;padding:10px 13px;display:flex;justify-content:space-between;align-items:center}
+.sig-key{font-size:.76rem;color:#9ca3af;font-weight:500}
+.sig-val{font-size:.82rem;font-weight:700}
+.sig-true{color:#4ade80}.sig-false{color:#f87171}.sig-none{color:#6b7280}.sig-text{color:#e5e7eb}
+
+/* Reasons */
+.reasons-list{margin-bottom:18px}
+.reason-item{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:9px;padding:11px 14px;margin-bottom:8px}
+.reason-code{font-size:.72rem;font-weight:700;color:#f87171;text-transform:uppercase;letter-spacing:.5px}
+.reason-msg{font-size:.83rem;color:#fca5a5;margin-top:4px;line-height:1.5}
+.reason-field{font-size:.75rem;color:#9ca3af;margin-top:3px}
+
+/* RAG section */
+.rag-toggle{width:100%;background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.3);color:#a5b4fc;padding:10px 14px;border-radius:9px;text-align:left;font-size:.85rem;font-weight:600;cursor:pointer;margin-bottom:8px;transition:.25s}
+.rag-toggle:hover{background:rgba(99,102,241,.18)}
+.rag-body{display:none;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:9px;padding:14px;font-size:.8rem;color:#9ca3af;line-height:1.7;white-space:pre-wrap;max-height:250px;overflow-y:auto}
+.rag-body.open{display:block}
+
+/* Section labels */
+.section-label{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6b7280;margin-bottom:10px}
+
+@media(max-width:600px){.brand h1{font-size:2rem}.steps{flex-wrap:wrap}.step{flex:calc(50% - 4px)}.signals-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="brand">
+    <h1>ClearView</h1>
+    <p>Smart Document Intelligence &amp; Validation Platform</p>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-btn active" id="tab1Btn" onclick="switchTab('upload')">📄 Document Upload</button>
+    <button class="tab-btn" id="tab2Btn" onclick="switchTab('decision')">🔍 Invoice Decision</button>
+  </div>
+
+  <!-- ═══ TAB 1: Document Upload ═══════════════════════════════════════════ -->
+  <div class="tab-content active" id="tab-upload">
+    <div class="card">
+      <h2>Document Upload &amp; Validation</h2>
+      <div class="drop-zone" id="dropZone">
+        <p>📂 Click or Drag &amp; Drop Files Here</p>
+        <p class="hint">Supports: MSA · SOW · PO · PR · Invoice (PDF)</p>
+        <input type="file" id="fileInput" multiple/>
+      </div>
+      <div class="file-list" id="fileList"></div>
+      <div class="actions">
+        <button id="uploadBtn" disabled>Upload Files</button>
+        <button id="clearBtn">Clear All</button>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="progress-text" id="progressText">No uploads yet</div>
+      </div>
+      <div id="toastArea"></div>
+    </div>
+  </div>
+
+  <!-- ═══ TAB 2: Invoice Decision ════════════════════════════════════════════ -->
+  <div class="tab-content" id="tab-decision">
+    <div class="card">
+      <h2>Invoice Decision Pipeline</h2>
+      <p style="text-align:center;color:#9ca3af;font-size:.88rem;margin-bottom:18px">
+        Upload an Invoice PDF · Extract fields · Cross-check PO/PR/MSA/SOW · RAG search · AI Verdict
+      </p>
+
+      <!-- Drop zone -->
+      <div class="drop-zone" id="invDropZone">
+        <p>📄 Click or Drop Invoice PDF Here</p>
+        <p class="hint">Only PDF invoices accepted</p>
+        <input type="file" id="invFileInput" accept=".pdf"/>
+      </div>
+      <div id="inv-file-name"></div>
+
+      <button id="runDecisionBtn" disabled>Run Decision Pipeline</button>
+
+      <!-- Progress steps -->
+      <div class="steps" id="pipelineSteps" style="display:none">
+        <div class="step" id="step1"><span class="num">1</span>Extract Fields</div>
+        <div class="step" id="step2"><span class="num">2</span>Check DB Tables</div>
+        <div class="step" id="step3"><span class="num">3</span>RAG Search</div>
+        <div class="step" id="step4"><span class="num">4</span>LLM Decision</div>
+        <div class="step" id="step5"><span class="num">5</span>Done</div>
+      </div>
+      <div id="decisionStatus" style="text-align:center;margin-top:12px;font-size:.85rem;color:#9ca3af;min-height:22px"></div>
+
+      <!-- Verdict panel -->
+      <div id="verdictPanel">
+        <!-- Badge -->
+        <div id="verdictBadge" class="verdict-badge"></div>
+
+        <!-- Confidence -->
+        <div class="conf-wrap">
+          <div class="conf-label"><span>Confidence</span><span id="confPct">0%</span></div>
+          <div class="conf-bar"><div class="conf-fill" id="confFill"></div></div>
+        </div>
+
+        <!-- Summary -->
+        <div class="section-label">Summary</div>
+        <div class="summary-box" id="summaryBox"></div>
+
+        <!-- Signals -->
+        <div class="section-label">Validation Signals</div>
+        <div class="signals-grid" id="signalsGrid"></div>
+
+        <!-- Reasons -->
+        <div id="reasonsSection" style="display:none">
+          <div class="section-label">Rejection Reasons</div>
+          <div class="reasons-list" id="reasonsList"></div>
+        </div>
+
+        <!-- RAG Context -->
+        <div id="ragSection" style="display:none">
+          <button class="rag-toggle" onclick="toggleRag()">🔎 Unstructured RAG Context (click to expand)</button>
+          <div class="rag-body" id="ragBody"></div>
+        </div>
+      </div>
+
+      <div id="invToastArea"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── Tab switching ──────────────────────────────────────────────────────────
+function switchTab(name){
+  document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+name).classList.add('active');
+  document.getElementById(name==='upload'?'tab1Btn':'tab2Btn').classList.add('active');
+}
+
+// ══════════════════════════════════════════════════════════
+// TAB 1 — Document Upload (original logic, unchanged)
+// ══════════════════════════════════════════════════════════
+const dropZone=document.getElementById('dropZone');
+const fileInput=document.getElementById('fileInput');
+const fileList=document.getElementById('fileList');
+const uploadBtn=document.getElementById('uploadBtn');
+const clearBtn=document.getElementById('clearBtn');
+const progressText=document.getElementById('progressText');
+const progressFill=document.getElementById('progressFill');
+const toastArea=document.getElementById('toastArea');
+let selectedFiles=[];
+
+function formatSize(b){return(b/1024).toFixed(2)+' KB'}
+function renderFiles(){
+  fileList.innerHTML='';
+  selectedFiles.forEach((f,i)=>{
+    const d=document.createElement('div');d.className='file-item';
+    d.innerHTML=`<div class="file-info"><span class="file-name">${f.name}</span><span class="file-size">${formatSize(f.size)}</span></div><button class="remove-btn" onclick="removeFile(${i})">Remove</button>`;
+    fileList.appendChild(d);
+  });
+  uploadBtn.disabled=selectedFiles.length===0;
+}
+function removeFile(i){selectedFiles.splice(i,1);renderFiles()}
+function addFiles(files){for(const f of files)selectedFiles.push(f);renderFiles()}
+fileInput.addEventListener('change',e=>{addFiles(e.target.files);fileInput.value=''});
+dropZone.addEventListener('click',()=>fileInput.click());
+dropZone.addEventListener('dragover',e=>{e.preventDefault();dropZone.classList.add('dragover')});
+dropZone.addEventListener('dragleave',()=>dropZone.classList.remove('dragover'));
+dropZone.addEventListener('drop',e=>{e.preventDefault();dropZone.classList.remove('dragover');addFiles(e.dataTransfer.files)});
+clearBtn.addEventListener('click',()=>{selectedFiles=[];renderFiles();progressFill.style.width='0%';progressText.textContent='Files cleared'});
+
+function toast(msg,type,area=toastArea){
+  const d=document.createElement('div');d.className=`toast ${type}`;d.textContent=msg;
+  area.prepend(d);setTimeout(()=>d.remove(),5000);
+}
+
+uploadBtn.addEventListener('click',async()=>{
+  uploadBtn.disabled=true;let done=0,failed=[];
+  for(const f of selectedFiles){
+    const fd=new FormData();fd.append('file',f);
+    try{
+      const r=await fetch('/upload',{method:'POST',body:fd});
+      if(!r.ok)throw new Error(await r.text());
+      const j=await r.json();toast(`✓ ${f.name}: ${j.message}`,'success');done++;
+    }catch(e){toast(`✗ ${f.name}: ${e.message}`,'error');failed.push(f)}
+    const p=((done+failed.length)/selectedFiles.length)*100;
+    progressFill.style.width=p+'%';progressText.textContent=`Uploaded ${done+failed.length} / ${selectedFiles.length}`;
+  }
+  selectedFiles=failed;renderFiles();
+  progressText.textContent=`Done: ${done} success, ${failed.length} failed`;
+  uploadBtn.disabled=selectedFiles.length===0;
+});
+
+// ══════════════════════════════════════════════════════════
+// TAB 2 — Invoice Decision Pipeline
+// ══════════════════════════════════════════════════════════
+const invDrop=document.getElementById('invDropZone');
+const invInput=document.getElementById('invFileInput');
+const invFileName=document.getElementById('inv-file-name');
+const runBtn=document.getElementById('runDecisionBtn');
+const stepsEl=document.getElementById('pipelineSteps');
+const statusEl=document.getElementById('decisionStatus');
+const invToast=document.getElementById('invToastArea');
+let invFile=null;
+
+invDrop.addEventListener('click',()=>invInput.click());
+invDrop.addEventListener('dragover',e=>{e.preventDefault();invDrop.classList.add('dragover')});
+invDrop.addEventListener('dragleave',()=>invDrop.classList.remove('dragover'));
+invDrop.addEventListener('drop',e=>{e.preventDefault();invDrop.classList.remove('dragover');setInvFile(e.dataTransfer.files[0])});
+invInput.addEventListener('change',e=>setInvFile(e.target.files[0]));
+
+function setInvFile(f){
+  if(!f)return;
+  if(!f.name.toLowerCase().endsWith('.pdf')){toast('Only PDF files accepted.','error',invToast);return}
+  invFile=f;invFileName.textContent='📎 '+f.name+' ('+formatSize(f.size)+')';
+  runBtn.disabled=false;resetVerdict();
+}
+
+function setStep(n,state){
+  for(let i=1;i<=5;i++){
+    const s=document.getElementById('step'+i);
+    s.className='step'+(i<n?' done':i===n?' active':'');
+  }
+}
+function resetVerdict(){
+  document.getElementById('verdictPanel').style.display='none';
+  stepsEl.style.display='none';statusEl.textContent='';
+  for(let i=1;i<=5;i++)document.getElementById('step'+i).className='step';
+}
+
+runBtn.addEventListener('click',async()=>{
+  if(!invFile)return;
+  runBtn.disabled=true;resetVerdict();
+  stepsEl.style.display='flex';
+
+  // Upload the file
+  setStep(1,'active');statusEl.innerHTML='<span class="spinner"></span>Uploading &amp; extracting invoice fields…';
+  const fd=new FormData();fd.append('file',invFile);
+  let fileId;
+  try{
+    const r=await fetch('/upload-invoice',{method:'POST',body:fd});
+    const j=await r.json();
+    if(!r.ok||!j.ok){toast('Upload failed: '+(j.message||r.statusText),'error',invToast);runBtn.disabled=false;return}
+    fileId=j.file_id;
+  }catch(e){toast('Network error: '+e.message,'error',invToast);runBtn.disabled=false;return}
+
+  // Poll for result — up to 15 minutes (LLM can take 6-8 min with retries)
+  setStep(2,'active');statusEl.innerHTML='<span class="spinner"></span>Cross-checking PO / PR / MSA / SOW tables…';
+  let attempts=0;
+  const maxAttempts=450;   // 450 × 2s = 15 minutes
+  const STEP_TIMES={db:8,rag:20,llm:40}; // approximate step boundaries in poll ticks
+
+  const pollOnce=async()=>{
+    const r=await fetch('/invoice-decision/'+fileId);
+    const j=await r.json();
+    return j;
+  };
+
+  const poll=setInterval(async()=>{
+    attempts++;
+
+    // Timeout — but offer manual re-check button instead of dead end
+    if(attempts>maxAttempts){
+      clearInterval(poll);
+      statusEl.innerHTML=
+        'Taking longer than expected. The pipeline may still be running. '+
+        '<button onclick="recheckResult('+fileId+')" style="margin-left:10px;padding:6px 14px;'+
+        'background:linear-gradient(135deg,#6366f1,#4f46e5);color:#fff;border:none;border-radius:8px;'+
+        'cursor:pointer;font-size:.82rem;font-weight:600">🔄 Check Result</button>';
+      runBtn.disabled=false;
+      return;
+    }
+
+    try{
+      const j=await pollOnce();
+      if(!j.ok)return;
+
+      if(j.state==='running'){
+        // Animate steps based on elapsed time
+        if(attempts<STEP_TIMES.db)        setStep(2,'active');
+        else if(attempts<STEP_TIMES.rag){ setStep(3,'active');statusEl.innerHTML='<span class="spinner"></span>RAG vector search — querying FAISS index…';}
+        else{                             setStep(4,'active');statusEl.innerHTML='<span class="spinner"></span>LLM evaluating structured + unstructured signals…';}
+        return;
+      }
+
+      clearInterval(poll);
+      if(j.state==='failed'){
+        statusEl.textContent='Pipeline failed: '+(j.error||'unknown error');
+        toast('Pipeline failed: '+(j.error||'unknown error'),'error',invToast);
+        runBtn.disabled=false;return;
+      }
+
+      // Done — render verdict
+      setStep(5,'done');statusEl.textContent='';
+      renderVerdict(j.verdict||{},j.rag_context||'');
+      runBtn.disabled=false;
+    }catch(e){/* network blip — keep polling */}
+  },2000);
+});
+
+// Manual re-check after timeout — fetches the already-stored result
+async function recheckResult(fileId){
+  statusEl.innerHTML='<span class="spinner"></span>Checking result…';
+  try{
+    const r=await fetch('/invoice-decision/'+fileId);
+    const j=await r.json();
+    if(!j.ok){statusEl.textContent='No result found yet. Try again in a moment.';return;}
+    if(j.state==='running'){statusEl.innerHTML='Still running. <button onclick="recheckResult('+fileId+')" style="margin-left:10px;padding:6px 14px;background:linear-gradient(135deg,#6366f1,#4f46e5);color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:.82rem;font-weight:600">🔄 Check Again</button>';return;}
+    if(j.state==='failed'){statusEl.textContent='Pipeline failed: '+(j.error||'unknown error');toast('Pipeline failed: '+(j.error||'unknown error'),'error',invToast);return;}
+    // Done!
+    setStep(5,'done');statusEl.textContent='';
+    renderVerdict(j.verdict||{},j.rag_context||'');
+    runBtn.disabled=false;
+  }catch(e){statusEl.textContent='Network error: '+e.message;}
+}
+
+
+function renderVerdict(v,rag){
+  const panel=document.getElementById('verdictPanel');
+  panel.style.display='block';
+  // Badge
+  const verd=(v.verdict||'needs_review').toUpperCase();
+  const badge=document.getElementById('verdictBadge');
+  const icons={APPROVED:'✅',REJECTED:'❌',NEEDS_REVIEW:'⚠️'};
+  const cls={APPROVED:'badge-approved',REJECTED:'badge-rejected',NEEDS_REVIEW:'badge-review'};
+  badge.className='verdict-badge '+(cls[verd]||'badge-review');
+  badge.innerHTML=(icons[verd]||'❓')+' '+verd.replace('_',' ');
+  // Confidence
+  const pct=Math.round((v.confidence||0)*100);
+  document.getElementById('confPct').textContent=pct+'%';
+  const fill=document.getElementById('confFill');
+  const colors={APPROVED:'#22c55e',REJECTED:'#ef4444',NEEDS_REVIEW:'#fbbf24'};
+  fill.style.background=colors[verd]||'#fbbf24';
+  setTimeout(()=>fill.style.width=pct+'%',50);
+  // Summary
+  document.getElementById('summaryBox').textContent=v.summary||'No summary provided.';
+  // Signals
+  const grid=document.getElementById('signalsGrid');grid.innerHTML='';
+  const sigs=v.signals||{};
+  const labels={
+    is_duplicate:'Duplicate',po_found:'PO Found',po_status:'PO Status',po_date_valid:'PO Date Valid',
+    amount_within_po:'Amount ≤ PO',vendor_match:'Vendor Match',pr_found:'PR Found',pr_status:'PR Status',
+    msa_found:'MSA Found',msa_status:'MSA Status',msa_valid:'MSA Valid',sow_found:'SOW Found',
+    sow_status:'SOW Status',amount_within_sow:'Amount ≤ SOW',vendor_name:'Vendor',client_name:'Client',
+    grn_reference:'GRN Ref',msa_reference:'MSA Ref',sow_reference:'SOW Ref',po_reference:'PO Ref',
+    po_links_msa:'PO→MSA',po_links_sow:'PO→SOW'
+  };
+  for(const[k,val]of Object.entries(sigs)){
+    const lbl=labels[k]||k.replace(/_/g,' ');
+    let cls='sig-text',disp=String(val);
+    if(val===true){cls='sig-true';disp='✓ Yes'}
+    else if(val===false){cls='sig-false';disp='✗ No'}
+    else if(val===null||val===undefined||disp==='not provided'){cls='sig-none';disp='—'}
+    grid.innerHTML+=`<div class="signal-item"><span class="sig-key">${lbl}</span><span class="sig-val ${cls}">${disp}</span></div>`;
+  }
+  // Reasons
+  const reasons=v.reasons||[];
+  const rsec=document.getElementById('reasonsSection');
+  if(reasons.length){
+    rsec.style.display='block';
+    const rl=document.getElementById('reasonsList');rl.innerHTML='';
+    reasons.forEach(r=>{
+      rl.innerHTML+=`<div class="reason-item"><div class="reason-code">${r.code||'ERROR'}</div><div class="reason-msg">${r.message||''}</div><div class="reason-field">Field: ${r.field||'—'}  Value: ${r.value!=null?r.value:'—'}</div></div>`;
+    });
+  }else{rsec.style.display='none'}
+  // RAG
+  const rsec2=document.getElementById('ragSection');
+  if(rag&&rag.trim()&&rag!=='No relevant unstructured context available.'&&!rag.startsWith('RAG unavailable')){
+    rsec2.style.display='block';
+    document.getElementById('ragBody').textContent=rag;
+  }else{rsec2.style.display='none'}
+  panel.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function toggleRag(){
+  const b=document.getElementById('ragBody');
+  b.classList.toggle('open');
+}
+</script>
+</body>
+</html>

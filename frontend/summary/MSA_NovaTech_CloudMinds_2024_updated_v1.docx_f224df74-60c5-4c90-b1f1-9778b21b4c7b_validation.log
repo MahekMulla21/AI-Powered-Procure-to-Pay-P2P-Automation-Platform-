@@ -1,0 +1,11 @@
+File Name: MSA_NovaTech_CloudMinds_2024_updated_v1.docx
+Status: VALID
+Reason: All checks passed
+============================================================
+DQ-001 | File Type Check | PASS | OK
+DQ-002 | File Size Check | PASS | OK
+DQ-003 | DOCX Readability | PASS | Readable
+DQ-005 | Text Extraction | PASS | OK
+DQ-006 | Minimum Content | PASS | OK
+DQ-007 | Noise Check | PASS | OK
+DQ-008 | Image Quality | WARNING | Not applicable

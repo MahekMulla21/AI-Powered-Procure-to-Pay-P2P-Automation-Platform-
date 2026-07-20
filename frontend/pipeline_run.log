@@ -1,0 +1,1151 @@
+2026-04-30 16:53:49,776 [INFO] app: Document Upload Server Started
+2026-04-30 16:53:49,776 [INFO] app: URL      : http://127.0.0.1:8000
+2026-04-30 16:53:49,776 [INFO] app: Input    : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\frontend\input
+2026-04-30 16:53:49,776 [INFO] app: Temp     : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary
+2026-04-30 16:53:49,776 [INFO] app: Logs     : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\logs
+2026-04-30 16:53:49,776 [INFO] app: Pipeline : MSA + Invoice (parallel via main.py)
+2026-04-30 16:53:49,776 [INFO] app: Ready.
+2026-04-30 16:54:35,382 [INFO] app: Document Upload Server Started
+2026-04-30 16:54:35,383 [INFO] app: URL      : http://127.0.0.1:8000
+2026-04-30 16:54:35,383 [INFO] app: Input    : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\frontend\input
+2026-04-30 16:54:35,383 [INFO] app: Temp     : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary
+2026-04-30 16:54:35,383 [INFO] app: Logs     : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\logs
+2026-04-30 16:54:35,384 [INFO] app: Pipeline : MSA + Invoice (parallel via main.py)
+2026-04-30 16:54:35,384 [INFO] app: Ready.
+2026-04-30 16:55:01,475 [INFO] app: [REQUEST] POST /upload
+2026-04-30 16:55:01,475 [INFO] app: [UPLOAD RECEIVED] Original File Name=MSA_NovaTech_CloudMinds_2024 1.pdf
+2026-04-30 16:55:01,481 [INFO] app: [TEMP SAVE SUCCESS] File=MSA_NovaTech_CloudMinds_2024_1.pdf | Temp Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\1777548301_MSA_NovaTech_CloudMinds_2024_1.pdf
+2026-04-30 16:55:01,750 [INFO] app: [VALIDATION COMPLETE] File=MSA_NovaTech_CloudMinds_2024_1.pdf | Status=VALID | Reason=All checks passed
+2026-04-30 16:55:01,784 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\MSA_NovaTech_CloudMinds_2024_1.pdf_086dc422-8408-4de8-91d5-c7609738950c_validation.log
+2026-04-30 16:55:01,785 [INFO] app: [FILE MOVED] File=MSA_NovaTech_CloudMinds_2024_1.pdf | Final Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548301_MSA_NovaTech_CloudMinds_2024_1_20260430_165501.pdf
+2026-04-30 16:55:22,831 [ERROR] app: [UPLOAD PROCESS FAILED] Error=connection to server at "10.1.1.53", port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+Traceback (most recent call last):
+  File "C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\app.py", line 185, in upload_file
+    file_id = save_file_record(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\db.py", line 12, in save_file_record
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\db.py", line 4, in get_connection
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ws_htu2013\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "10.1.1.53", port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-04-30 16:55:22,897 [INFO] app: [REQUEST] POST /upload
+2026-04-30 16:55:22,897 [INFO] app: [UPLOAD RECEIVED] Original File Name=Invoice_CloudMinds_NovaTech_2024 1.pdf
+2026-04-30 16:55:22,899 [INFO] app: [TEMP SAVE SUCCESS] File=Invoice_CloudMinds_NovaTech_2024_1.pdf | Temp Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\1777548322_Invoice_CloudMinds_NovaTech_2024_1.pdf
+2026-04-30 16:55:22,951 [INFO] app: [VALIDATION COMPLETE] File=Invoice_CloudMinds_NovaTech_2024_1.pdf | Status=VALID | Reason=All checks passed
+2026-04-30 16:55:22,958 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\Invoice_CloudMinds_NovaTech_2024_1.pdf_7448805a-9c35-4cf4-82ed-d63222842a69_validation.log
+2026-04-30 16:55:22,958 [INFO] app: [FILE MOVED] File=Invoice_CloudMinds_NovaTech_2024_1.pdf | Final Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548322_Invoice_CloudMinds_NovaTech_2024_1_20260430_165522.pdf
+2026-04-30 16:55:44,020 [ERROR] app: [UPLOAD PROCESS FAILED] Error=connection to server at "10.1.1.53", port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+Traceback (most recent call last):
+  File "C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\app.py", line 185, in upload_file
+    file_id = save_file_record(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\db.py", line 12, in save_file_record
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\db.py", line 4, in get_connection
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ws_htu2013\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "10.1.1.53", port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-04-30 16:58:11,378 [INFO] app: Document Upload Server Started
+2026-04-30 16:58:11,378 [INFO] app: URL      : http://127.0.0.1:8000
+2026-04-30 16:58:11,378 [INFO] app: Input    : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\frontend\input
+2026-04-30 16:58:11,378 [INFO] app: Temp     : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary
+2026-04-30 16:58:11,379 [INFO] app: Logs     : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\logs
+2026-04-30 16:58:11,379 [INFO] app: Pipeline : MSA + Invoice (parallel via main.py)
+2026-04-30 16:58:11,379 [INFO] app: Ready.
+2026-04-30 16:58:21,507 [INFO] app: [REQUEST] POST /upload
+2026-04-30 16:58:21,507 [INFO] app: [UPLOAD RECEIVED] Original File Name=MSA_NovaTech_CloudMinds_2024 1.pdf
+2026-04-30 16:58:21,509 [INFO] app: [TEMP SAVE SUCCESS] File=MSA_NovaTech_CloudMinds_2024_1.pdf | Temp Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\1777548501_MSA_NovaTech_CloudMinds_2024_1.pdf
+2026-04-30 16:58:21,727 [INFO] app: [VALIDATION COMPLETE] File=MSA_NovaTech_CloudMinds_2024_1.pdf | Status=VALID | Reason=All checks passed
+2026-04-30 16:58:21,728 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\MSA_NovaTech_CloudMinds_2024_1.pdf_3a0c3485-f556-4e1c-8820-2e02898d0ed9_validation.log
+2026-04-30 16:58:21,766 [INFO] app: [FILE MOVED] File=MSA_NovaTech_CloudMinds_2024_1.pdf | Final Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548501_MSA_NovaTech_CloudMinds_2024_1_20260430_165821.pdf
+2026-04-30 16:58:21,883 [INFO] app: [DB SAVE SUCCESS] File ID=382
+2026-04-30 16:58:22,056 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=382
+2026-04-30 16:58:22,057 [INFO] app: [VALID FILE] File ID=382 | Triggering MSA + Invoice pipelines in parallel
+2026-04-30 16:58:22,057 [INFO] app: [BACKGROUND TASK ADDED] File ID=382
+2026-04-30 16:58:22,072 [INFO] app: [PIPELINE START] File ID=382 | Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548501_MSA_NovaTech_CloudMinds_2024_1_20260430_165821.pdf
+2026-04-30 16:58:22,087 [INFO] app: [REQUEST] POST /upload
+2026-04-30 16:58:22,087 [INFO] app: [UPLOAD RECEIVED] Original File Name=Invoice_CloudMinds_NovaTech_2024 1.pdf
+2026-04-30 16:58:22,090 [INFO] app: [TEMP SAVE SUCCESS] File=Invoice_CloudMinds_NovaTech_2024_1.pdf | Temp Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\1777548502_Invoice_CloudMinds_NovaTech_2024_1.pdf
+2026-04-30 16:58:22,191 [INFO] app: [VALIDATION COMPLETE] File=Invoice_CloudMinds_NovaTech_2024_1.pdf | Status=VALID | Reason=All checks passed
+2026-04-30 16:58:22,193 [INFO] MSA: Starting MSA pipeline | file=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548501_MSA_NovaTech_CloudMinds_2024_1_20260430_165821.pdf | file_id=382
+2026-04-30 16:58:22,194 [INFO] Invoice: Starting Invoice pipeline | pdf=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548501_MSA_NovaTech_CloudMinds_2024_1_20260430_165821.pdf | file_id=382
+2026-04-30 16:58:22,195 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\Invoice_CloudMinds_NovaTech_2024_1.pdf_90df5a55-9388-46ca-9b9c-114a42b45645_validation.log
+2026-04-30 16:58:22,196 [INFO] app: [FILE MOVED] File=Invoice_CloudMinds_NovaTech_2024_1.pdf | Final Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548502_Invoice_CloudMinds_NovaTech_2024_1_20260430_165822.pdf
+2026-04-30 16:58:22,212 [INFO] Invoice: Checking Ollama server...
+2026-04-30 16:58:22,282 [INFO] app: [DB SAVE SUCCESS] File ID=383
+2026-04-30 16:58:22,436 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=383
+2026-04-30 16:58:22,437 [INFO] app: [VALID FILE] File ID=383 | Triggering MSA + Invoice pipelines in parallel
+2026-04-30 16:58:22,438 [INFO] app: [BACKGROUND TASK ADDED] File ID=383
+2026-04-30 16:58:22,441 [INFO] app: [PIPELINE START] File ID=383 | Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548502_Invoice_CloudMinds_NovaTech_2024_1_20260430_165822.pdf
+2026-04-30 16:58:22,443 [INFO] MSA: Starting MSA pipeline | file=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548502_Invoice_CloudMinds_NovaTech_2024_1_20260430_165822.pdf | file_id=383
+2026-04-30 16:58:22,444 [INFO] Invoice: Starting Invoice pipeline | pdf=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548502_Invoice_CloudMinds_NovaTech_2024_1_20260430_165822.pdf | file_id=383
+2026-04-30 16:58:22,445 [INFO] Invoice: Checking Ollama server...
+2026-04-30 16:58:24,374 [INFO] Invoice: Ollama server is running.
+2026-04-30 16:58:24,375 [INFO] Invoice: Checking model 'llama3'...
+2026-04-30 16:58:24,585 [INFO] Invoice: Ollama server is running.
+2026-04-30 16:58:24,585 [INFO] Invoice: Checking model 'llama3'...
+2026-04-30 16:58:26,429 [INFO] Invoice: Model 'llama3' is available.
+2026-04-30 16:58:26,429 [ERROR] Invoice: Invoice pipeline FAILED after 4.23s: cannot import name 'run_pipeline' from 'main' (C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\main.py)
+2026-04-30 16:58:26,432 [INFO] app: [PIPELINE DONE] Invoice | status=failed | time=4.23s
+2026-04-30 16:58:26,621 [INFO] Invoice: Model 'llama3' is available.
+2026-04-30 16:58:26,623 [ERROR] Invoice: Invoice pipeline FAILED after 4.18s: cannot import name 'run_pipeline' from 'main' (C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\main.py)
+2026-04-30 16:58:26,624 [INFO] app: [PIPELINE DONE] Invoice | status=failed | time=4.18s
+2026-04-30 16:58:30,941 [INFO] faiss.loader: Loading faiss with AVX512 support.
+2026-04-30 16:58:30,941 [INFO] faiss.loader: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-04-30 16:58:30,941 [INFO] faiss.loader: Loading faiss with AVX2 support.
+2026-04-30 16:58:30,965 [INFO] faiss.loader: Successfully loaded faiss with AVX2 support.
+2026-04-30 16:58:37,883 [ERROR] MSA: MSA pipeline FAILED after 15.69s: No module named 'sentence_transformers'
+2026-04-30 16:58:37,883 [ERROR] MSA: MSA pipeline FAILED after 15.44s: cannot import name 'process_file' from 'backend.msa_main' (C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\backend\msa_main.py)
+2026-04-30 16:58:37,888 [INFO] app: [PIPELINE DONE] MSA | status=failed | time=15.69s
+2026-04-30 16:58:37,889 [ERROR] app: [PIPELINE FAILED] Invoice | error=cannot import name 'run_pipeline' from 'main' (C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\main.py) | File ID=382
+2026-04-30 16:58:37,889 [ERROR] app: [PIPELINE FAILED] MSA | error=No module named 'sentence_transformers' | File ID=382
+2026-04-30 16:58:37,893 [INFO] app: [PIPELINE DONE] MSA | status=failed | time=15.44s
+2026-04-30 16:58:37,893 [ERROR] app: [PIPELINE FAILED] Invoice | error=cannot import name 'run_pipeline' from 'main' (C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\main.py) | File ID=383
+2026-04-30 16:58:37,893 [ERROR] app: [PIPELINE FAILED] MSA | error=cannot import name 'process_file' from 'backend.msa_main' (C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\backend\msa_main.py) | File ID=383
+2026-04-30 17:02:36,122 [INFO] app: ----------------------------------------
+2026-04-30 17:02:36,122 [INFO] app: Document Upload Server Started
+2026-04-30 17:02:36,122 [INFO] app: URL      : http://127.0.0.1:8000
+2026-04-30 17:02:36,122 [INFO] app: Backend  : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\backend
+2026-04-30 17:02:36,122 [INFO] app: Input    : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input
+2026-04-30 17:02:36,122 [INFO] app: Temp     : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary
+2026-04-30 17:02:36,124 [INFO] app: Logs     : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\logs
+2026-04-30 17:02:36,124 [INFO] app: Pipeline : MSA + Invoice (parallel via backend/main.py)
+2026-04-30 17:02:36,124 [INFO] app: Ready.
+2026-04-30 17:02:36,124 [INFO] app: ----------------------------------------
+2026-04-30 17:02:56,831 [INFO] app: [REQUEST] POST /upload
+2026-04-30 17:02:56,831 [INFO] app: [UPLOAD RECEIVED] Original File Name=PR_NovaTech_2024 1.pdf
+2026-04-30 17:02:56,834 [INFO] app: [TEMP SAVE SUCCESS] File=PR_NovaTech_2024_1.pdf | Temp Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\1777548776_PR_NovaTech_2024_1.pdf
+2026-04-30 17:02:56,954 [INFO] app: [VALIDATION COMPLETE] File=PR_NovaTech_2024_1.pdf | Status=VALID | Reason=All checks passed
+2026-04-30 17:02:56,956 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\PR_NovaTech_2024_1.pdf_dfcefe91-4bee-4f02-a006-1302828af227_validation.log
+2026-04-30 17:02:56,957 [INFO] app: [FILE MOVED] File=PR_NovaTech_2024_1.pdf | Final Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548776_PR_NovaTech_2024_1_20260430_170256.pdf
+2026-04-30 17:02:57,068 [INFO] app: [DB SAVE SUCCESS] File ID=384
+2026-04-30 17:02:57,215 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=384
+2026-04-30 17:02:57,216 [INFO] app: [VALID FILE] File ID=384 | Triggering MSA + Invoice in parallel
+2026-04-30 17:02:57,216 [INFO] app: [BACKGROUND TASK ADDED] File ID=384
+2026-04-30 17:02:57,227 [INFO] app: [PIPELINE START] File ID=384 | Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548776_PR_NovaTech_2024_1_20260430_170256.pdf
+2026-04-30 17:02:57,233 [INFO] MSA: Starting MSA pipeline | file=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548776_PR_NovaTech_2024_1_20260430_170256.pdf | file_id=384
+2026-04-30 17:02:57,235 [INFO] Invoice: Starting Invoice pipeline | pdf=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548776_PR_NovaTech_2024_1_20260430_170256.pdf | file_id=384
+2026-04-30 17:02:57,253 [INFO] app: [REQUEST] POST /upload
+2026-04-30 17:02:57,253 [INFO] app: [UPLOAD RECEIVED] Original File Name=MSA_NovaTech_CloudMinds_2024 1.pdf
+2026-04-30 17:02:57,254 [INFO] Invoice: Checking Ollama server...
+2026-04-30 17:02:57,254 [INFO] app: [TEMP SAVE SUCCESS] File=MSA_NovaTech_CloudMinds_2024_1.pdf | Temp Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\1777548777_MSA_NovaTech_CloudMinds_2024_1.pdf
+2026-04-30 17:02:57,480 [INFO] app: [VALIDATION COMPLETE] File=MSA_NovaTech_CloudMinds_2024_1.pdf | Status=VALID | Reason=All checks passed
+2026-04-30 17:02:57,482 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\MSA_NovaTech_CloudMinds_2024_1.pdf_784312b7-db45-4869-bf32-3762b3d4939e_validation.log
+2026-04-30 17:02:57,529 [INFO] app: [FILE MOVED] File=MSA_NovaTech_CloudMinds_2024_1.pdf | Final Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548777_MSA_NovaTech_CloudMinds_2024_1_20260430_170257.pdf
+2026-04-30 17:02:57,623 [INFO] app: [DB SAVE SUCCESS] File ID=385
+2026-04-30 17:02:57,776 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=385
+2026-04-30 17:02:57,776 [INFO] app: [VALID FILE] File ID=385 | Triggering MSA + Invoice in parallel
+2026-04-30 17:02:57,777 [INFO] app: [BACKGROUND TASK ADDED] File ID=385
+2026-04-30 17:02:57,790 [INFO] app: [PIPELINE START] File ID=385 | Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548777_MSA_NovaTech_CloudMinds_2024_1_20260430_170257.pdf
+2026-04-30 17:02:57,793 [INFO] MSA: Starting MSA pipeline | file=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548777_MSA_NovaTech_CloudMinds_2024_1_20260430_170257.pdf | file_id=385
+2026-04-30 17:02:57,794 [INFO] Invoice: Starting Invoice pipeline | pdf=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548777_MSA_NovaTech_CloudMinds_2024_1_20260430_170257.pdf | file_id=385
+2026-04-30 17:02:57,795 [INFO] Invoice: Checking Ollama server...
+2026-04-30 17:02:57,818 [INFO] app: [REQUEST] POST /upload
+2026-04-30 17:02:57,819 [INFO] app: [UPLOAD RECEIVED] Original File Name=Invoice_CloudMinds_NovaTech_2024 1.pdf
+2026-04-30 17:02:57,820 [INFO] app: [TEMP SAVE SUCCESS] File=Invoice_CloudMinds_NovaTech_2024_1.pdf | Temp Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\1777548777_Invoice_CloudMinds_NovaTech_2024_1.pdf
+2026-04-30 17:02:58,023 [INFO] app: [VALIDATION COMPLETE] File=Invoice_CloudMinds_NovaTech_2024_1.pdf | Status=VALID | Reason=All checks passed
+2026-04-30 17:02:58,024 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\Invoice_CloudMinds_NovaTech_2024_1.pdf_c7f56bea-de6c-49b2-b602-073551daeea5_validation.log
+2026-04-30 17:02:58,027 [INFO] app: [FILE MOVED] File=Invoice_CloudMinds_NovaTech_2024_1.pdf | Final Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548777_Invoice_CloudMinds_NovaTech_2024_1_20260430_170258.pdf
+2026-04-30 17:02:58,103 [INFO] app: [DB SAVE SUCCESS] File ID=386
+2026-04-30 17:02:58,244 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=386
+2026-04-30 17:02:58,245 [INFO] app: [VALID FILE] File ID=386 | Triggering MSA + Invoice in parallel
+2026-04-30 17:02:58,246 [INFO] app: [BACKGROUND TASK ADDED] File ID=386
+2026-04-30 17:02:58,250 [INFO] app: [PIPELINE START] File ID=386 | Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548777_Invoice_CloudMinds_NovaTech_2024_1_20260430_170258.pdf
+2026-04-30 17:02:58,252 [INFO] MSA: Starting MSA pipeline | file=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548777_Invoice_CloudMinds_NovaTech_2024_1_20260430_170258.pdf | file_id=386
+2026-04-30 17:02:58,255 [INFO] Invoice: Starting Invoice pipeline | pdf=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777548777_Invoice_CloudMinds_NovaTech_2024_1_20260430_170258.pdf | file_id=386
+2026-04-30 17:02:58,255 [INFO] Invoice: Checking Ollama server...
+2026-04-30 17:02:59,551 [INFO] Invoice: Ollama server is running.
+2026-04-30 17:02:59,551 [INFO] Invoice: Checking model 'llama3'...
+2026-04-30 17:02:59,846 [INFO] Invoice: Ollama server is running.
+2026-04-30 17:02:59,847 [INFO] Invoice: Checking model 'llama3'...
+2026-04-30 17:03:00,315 [INFO] Invoice: Ollama server is running.
+2026-04-30 17:03:00,315 [INFO] Invoice: Checking model 'llama3'...
+2026-04-30 17:03:01,615 [INFO] Invoice: Model 'llama3' is available.
+2026-04-30 17:03:01,615 [ERROR] Invoice: Invoice pipeline FAILED after 4.38s: cannot import name 'run_pipeline' from 'main' (C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\main.py)
+2026-04-30 17:03:01,617 [INFO] app: [PIPELINE DONE] Invoice | status=failed | time=4.38s
+2026-04-30 17:03:01,880 [INFO] Invoice: Model 'llama3' is available.
+2026-04-30 17:03:01,880 [ERROR] Invoice: Invoice pipeline FAILED after 4.08s: cannot import name 'run_pipeline' from 'main' (C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\main.py)
+2026-04-30 17:03:01,882 [INFO] app: [PIPELINE DONE] Invoice | status=failed | time=4.08s
+2026-04-30 17:03:02,364 [INFO] Invoice: Model 'llama3' is available.
+2026-04-30 17:03:02,364 [ERROR] Invoice: Invoice pipeline FAILED after 4.11s: cannot import name 'run_pipeline' from 'main' (C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\main.py)
+2026-04-30 17:03:02,367 [INFO] app: [PIPELINE DONE] Invoice | status=failed | time=4.11s
+2026-04-30 17:03:23,187 [INFO] faiss.loader: Loading faiss with AVX512 support.
+2026-04-30 17:03:23,187 [INFO] faiss.loader: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-04-30 17:03:23,187 [INFO] faiss.loader: Loading faiss with AVX2 support.
+2026-04-30 17:03:23,211 [INFO] faiss.loader: Successfully loaded faiss with AVX2 support.
+2026-04-30 17:03:30,877 [INFO] sentence_transformers.base.model: No device provided, using cpu
+2026-04-30 17:03:31,511 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:03:31,568 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-04-30 17:03:31,868 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:03:31,925 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-30 17:03:31,974 [INFO] sentence_transformers.base.model: Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-04-30 17:03:32,270 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:03:32,327 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-30 17:03:32,632 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:03:32,690 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-04-30 17:03:33,041 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:03:33,098 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-04-30 17:03:33,397 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:03:33,456 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-30 17:03:33,757 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-30 17:03:34,083 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:03:34,144 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-04-30 17:03:34,506 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:03:34,566 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-04-30 17:03:35,230 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-04-30 17:03:35,530 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-04-30 17:03:35,819 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-04-30 17:03:36,115 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-04-30 17:03:36,409 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:03:36,475 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-30 17:03:36,829 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:03:36,890 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-04-30 17:03:37,182 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:03:37,240 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-04-30 17:03:37,530 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:03:37,592 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-30 17:03:37,887 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-30 17:03:38,187 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-30 17:03:38,767 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:03:38,830 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-30 17:03:39,119 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-04-30 17:07:13,172 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-04-30 17:07:15,124 [INFO] MSA: MSA pipeline completed in 257.33s
+2026-04-30 17:07:15,125 [INFO] app: [PIPELINE DONE] MSA | status=success | time=257.33s
+2026-04-30 17:07:15,130 [ERROR] app: [PIPELINE FAILED] Invoice | error=cannot import name 'run_pipeline' from 'main' (C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\main.py) | File ID=385
+2026-04-30 17:09:01,888 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-04-30 17:09:02,596 [INFO] MSA: MSA pipeline completed in 365.36s
+2026-04-30 17:09:02,597 [INFO] app: [PIPELINE DONE] MSA | status=success | time=365.36s
+2026-04-30 17:09:02,598 [ERROR] app: [PIPELINE FAILED] Invoice | error=cannot import name 'run_pipeline' from 'main' (C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\main.py) | File ID=384
+2026-04-30 17:11:18,601 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-04-30 17:11:19,356 [INFO] MSA: MSA pipeline completed in 501.10s
+2026-04-30 17:11:19,356 [INFO] app: [PIPELINE DONE] MSA | status=success | time=501.1s
+2026-04-30 17:11:19,357 [ERROR] app: [PIPELINE FAILED] Invoice | error=cannot import name 'run_pipeline' from 'main' (C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\main.py) | File ID=386
+2026-04-30 17:26:23,888 [INFO] app: ----------------------------------------
+2026-04-30 17:26:23,888 [INFO] app: Document Upload Server Started
+2026-04-30 17:26:23,889 [INFO] app: URL      : http://127.0.0.1:8000
+2026-04-30 17:26:23,889 [INFO] app: Backend  : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\backend
+2026-04-30 17:26:23,889 [INFO] app: Input    : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input
+2026-04-30 17:26:23,889 [INFO] app: Temp     : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary
+2026-04-30 17:26:23,890 [INFO] app: Logs     : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\logs
+2026-04-30 17:26:23,890 [INFO] app: Pipeline : MSA + Invoice (parallel via backend/main.py)
+2026-04-30 17:26:23,890 [INFO] app: Ready.
+2026-04-30 17:26:23,890 [INFO] app: ----------------------------------------
+2026-04-30 17:26:34,716 [INFO] app: ----------------------------------------
+2026-04-30 17:26:34,716 [INFO] app: Document Upload Server Started
+2026-04-30 17:26:34,716 [INFO] app: URL      : http://127.0.0.1:8000
+2026-04-30 17:26:34,716 [INFO] app: Backend  : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\backend
+2026-04-30 17:26:34,716 [INFO] app: Input    : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input
+2026-04-30 17:26:34,716 [INFO] app: Temp     : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary
+2026-04-30 17:26:34,716 [INFO] app: Logs     : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\logs
+2026-04-30 17:26:34,716 [INFO] app: Pipeline : MSA + Invoice (parallel via backend/main.py)
+2026-04-30 17:26:34,718 [INFO] app: Ready.
+2026-04-30 17:26:34,718 [INFO] app: ----------------------------------------
+2026-04-30 17:26:57,698 [INFO] app: [REQUEST] POST /upload
+2026-04-30 17:26:57,699 [INFO] app: [UPLOAD RECEIVED] Original File Name=SOW_NovaTech_CloudMinds_2024 1.pdf
+2026-04-30 17:26:57,701 [INFO] app: [TEMP SAVE SUCCESS] File=SOW_NovaTech_CloudMinds_2024_1.pdf | Temp Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\1777550217_SOW_NovaTech_CloudMinds_2024_1.pdf
+2026-04-30 17:26:57,858 [INFO] app: [VALIDATION COMPLETE] File=SOW_NovaTech_CloudMinds_2024_1.pdf | Status=VALID | Reason=All checks passed
+2026-04-30 17:26:57,860 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\SOW_NovaTech_CloudMinds_2024_1.pdf_58815b74-bbd0-481d-b56e-92f73cc67efb_validation.log
+2026-04-30 17:26:57,863 [INFO] app: [FILE MOVED] File=SOW_NovaTech_CloudMinds_2024_1.pdf | Final Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550217_SOW_NovaTech_CloudMinds_2024_1_20260430_172657.pdf
+2026-04-30 17:26:57,967 [INFO] app: [DB SAVE SUCCESS] File ID=389
+2026-04-30 17:26:58,126 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=389
+2026-04-30 17:26:58,127 [INFO] app: [VALID FILE] File ID=389 | Triggering MSA + Invoice in parallel
+2026-04-30 17:26:58,127 [INFO] app: [BACKGROUND TASK ADDED] File ID=389
+2026-04-30 17:26:58,149 [INFO] app: [PIPELINE START] File ID=389 | Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550217_SOW_NovaTech_CloudMinds_2024_1_20260430_172657.pdf
+2026-04-30 17:26:58,165 [INFO] MSA: Starting MSA pipeline | file=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550217_SOW_NovaTech_CloudMinds_2024_1_20260430_172657.pdf | file_id=389
+2026-04-30 17:26:58,166 [INFO] Invoice: Starting Invoice pipeline | pdf=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550217_SOW_NovaTech_CloudMinds_2024_1_20260430_172657.pdf | file_id=389
+2026-04-30 17:26:58,173 [INFO] app: [REQUEST] POST /upload
+2026-04-30 17:26:58,174 [INFO] app: [UPLOAD RECEIVED] Original File Name=PO_NovaTech_CloudMinds_2024 1.pdf
+2026-04-30 17:26:58,175 [INFO] app: [TEMP SAVE SUCCESS] File=PO_NovaTech_CloudMinds_2024_1.pdf | Temp Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\1777550218_PO_NovaTech_CloudMinds_2024_1.pdf
+2026-04-30 17:26:58,311 [INFO] app: [VALIDATION COMPLETE] File=PO_NovaTech_CloudMinds_2024_1.pdf | Status=VALID | Reason=All checks passed
+2026-04-30 17:26:58,313 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\PO_NovaTech_CloudMinds_2024_1.pdf_4b846452-d453-4670-8858-718e79e9ee96_validation.log
+2026-04-30 17:26:58,315 [INFO] app: [FILE MOVED] File=PO_NovaTech_CloudMinds_2024_1.pdf | Final Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550218_PO_NovaTech_CloudMinds_2024_1_20260430_172658.pdf
+2026-04-30 17:26:58,327 [INFO] Invoice: Checking Ollama server...
+2026-04-30 17:26:58,438 [INFO] app: [DB SAVE SUCCESS] File ID=390
+2026-04-30 17:26:58,607 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=390
+2026-04-30 17:26:58,607 [INFO] app: [VALID FILE] File ID=390 | Triggering MSA + Invoice in parallel
+2026-04-30 17:26:58,607 [INFO] app: [BACKGROUND TASK ADDED] File ID=390
+2026-04-30 17:26:58,610 [INFO] app: [PIPELINE START] File ID=390 | Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550218_PO_NovaTech_CloudMinds_2024_1_20260430_172658.pdf
+2026-04-30 17:26:58,611 [INFO] MSA: Starting MSA pipeline | file=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550218_PO_NovaTech_CloudMinds_2024_1_20260430_172658.pdf | file_id=390
+2026-04-30 17:26:58,613 [INFO] Invoice: Starting Invoice pipeline | pdf=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550218_PO_NovaTech_CloudMinds_2024_1_20260430_172658.pdf | file_id=390
+2026-04-30 17:26:58,614 [INFO] Invoice: Checking Ollama server...
+2026-04-30 17:26:58,639 [INFO] app: [REQUEST] POST /upload
+2026-04-30 17:26:58,639 [INFO] app: [UPLOAD RECEIVED] Original File Name=PR_NovaTech_2024 1.pdf
+2026-04-30 17:26:58,640 [INFO] app: [TEMP SAVE SUCCESS] File=PR_NovaTech_2024_1.pdf | Temp Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\1777550218_PR_NovaTech_2024_1.pdf
+2026-04-30 17:26:58,731 [INFO] app: [VALIDATION COMPLETE] File=PR_NovaTech_2024_1.pdf | Status=VALID | Reason=All checks passed
+2026-04-30 17:26:58,735 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\PR_NovaTech_2024_1.pdf_eb157e9c-60e1-4a18-a3c6-8f6f07ebb018_validation.log
+2026-04-30 17:26:58,737 [INFO] app: [FILE MOVED] File=PR_NovaTech_2024_1.pdf | Final Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550218_PR_NovaTech_2024_1_20260430_172658.pdf
+2026-04-30 17:26:58,821 [INFO] app: [DB SAVE SUCCESS] File ID=391
+2026-04-30 17:26:58,961 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=391
+2026-04-30 17:26:58,962 [INFO] app: [VALID FILE] File ID=391 | Triggering MSA + Invoice in parallel
+2026-04-30 17:26:58,963 [INFO] app: [BACKGROUND TASK ADDED] File ID=391
+2026-04-30 17:26:58,967 [INFO] app: [PIPELINE START] File ID=391 | Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550218_PR_NovaTech_2024_1_20260430_172658.pdf
+2026-04-30 17:26:58,970 [INFO] MSA: Starting MSA pipeline | file=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550218_PR_NovaTech_2024_1_20260430_172658.pdf | file_id=391
+2026-04-30 17:26:58,972 [INFO] Invoice: Starting Invoice pipeline | pdf=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550218_PR_NovaTech_2024_1_20260430_172658.pdf | file_id=391
+2026-04-30 17:26:58,972 [INFO] Invoice: Checking Ollama server...
+2026-04-30 17:26:59,008 [INFO] app: [REQUEST] POST /upload
+2026-04-30 17:26:59,009 [INFO] app: [UPLOAD RECEIVED] Original File Name=MSA_NovaTech_CloudMinds_2024 1.pdf
+2026-04-30 17:26:59,011 [INFO] app: [TEMP SAVE SUCCESS] File=MSA_NovaTech_CloudMinds_2024_1.pdf | Temp Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\1777550219_MSA_NovaTech_CloudMinds_2024_1.pdf
+2026-04-30 17:26:59,295 [INFO] app: [VALIDATION COMPLETE] File=MSA_NovaTech_CloudMinds_2024_1.pdf | Status=VALID | Reason=All checks passed
+2026-04-30 17:26:59,297 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\MSA_NovaTech_CloudMinds_2024_1.pdf_e95dc9e4-7607-444b-8eca-f9fffc7033de_validation.log
+2026-04-30 17:26:59,299 [INFO] app: [FILE MOVED] File=MSA_NovaTech_CloudMinds_2024_1.pdf | Final Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550219_MSA_NovaTech_CloudMinds_2024_1_20260430_172659.pdf
+2026-04-30 17:26:59,396 [INFO] app: [DB SAVE SUCCESS] File ID=392
+2026-04-30 17:26:59,551 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=392
+2026-04-30 17:26:59,551 [INFO] app: [VALID FILE] File ID=392 | Triggering MSA + Invoice in parallel
+2026-04-30 17:26:59,551 [INFO] app: [BACKGROUND TASK ADDED] File ID=392
+2026-04-30 17:26:59,555 [INFO] app: [PIPELINE START] File ID=392 | Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550219_MSA_NovaTech_CloudMinds_2024_1_20260430_172659.pdf
+2026-04-30 17:26:59,557 [INFO] MSA: Starting MSA pipeline | file=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550219_MSA_NovaTech_CloudMinds_2024_1_20260430_172659.pdf | file_id=392
+2026-04-30 17:26:59,560 [INFO] Invoice: Starting Invoice pipeline | pdf=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550219_MSA_NovaTech_CloudMinds_2024_1_20260430_172659.pdf | file_id=392
+2026-04-30 17:26:59,561 [INFO] Invoice: Checking Ollama server...
+2026-04-30 17:26:59,592 [INFO] app: [REQUEST] POST /upload
+2026-04-30 17:26:59,592 [INFO] app: [UPLOAD RECEIVED] Original File Name=Invoice_CloudMinds_NovaTech_2024 1.pdf
+2026-04-30 17:26:59,593 [INFO] app: [TEMP SAVE SUCCESS] File=Invoice_CloudMinds_NovaTech_2024_1.pdf | Temp Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\1777550219_Invoice_CloudMinds_NovaTech_2024_1.pdf
+2026-04-30 17:26:59,710 [INFO] app: [VALIDATION COMPLETE] File=Invoice_CloudMinds_NovaTech_2024_1.pdf | Status=VALID | Reason=All checks passed
+2026-04-30 17:26:59,712 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\Invoice_CloudMinds_NovaTech_2024_1.pdf_8c7b30b6-6647-4cb2-ac21-d228c0adc7cc_validation.log
+2026-04-30 17:26:59,714 [INFO] app: [FILE MOVED] File=Invoice_CloudMinds_NovaTech_2024_1.pdf | Final Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550219_Invoice_CloudMinds_NovaTech_2024_1_20260430_172659.pdf
+2026-04-30 17:26:59,824 [INFO] app: [DB SAVE SUCCESS] File ID=393
+2026-04-30 17:26:59,961 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=393
+2026-04-30 17:26:59,962 [INFO] app: [VALID FILE] File ID=393 | Triggering MSA + Invoice in parallel
+2026-04-30 17:26:59,962 [INFO] app: [BACKGROUND TASK ADDED] File ID=393
+2026-04-30 17:26:59,968 [INFO] app: [PIPELINE START] File ID=393 | Path=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550219_Invoice_CloudMinds_NovaTech_2024_1_20260430_172659.pdf
+2026-04-30 17:26:59,970 [INFO] MSA: Starting MSA pipeline | file=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550219_Invoice_CloudMinds_NovaTech_2024_1_20260430_172659.pdf | file_id=393
+2026-04-30 17:26:59,972 [INFO] Invoice: Starting Invoice pipeline | pdf=C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777550219_Invoice_CloudMinds_NovaTech_2024_1_20260430_172659.pdf | file_id=393
+2026-04-30 17:26:59,972 [INFO] Invoice: Checking Ollama server...
+2026-04-30 17:27:00,480 [INFO] Invoice: Ollama server is running.
+2026-04-30 17:27:00,480 [INFO] Invoice: Checking model 'llama3'...
+2026-04-30 17:27:00,688 [INFO] Invoice: Ollama server is running.
+2026-04-30 17:27:00,688 [INFO] Invoice: Checking model 'llama3'...
+2026-04-30 17:27:01,035 [INFO] Invoice: Ollama server is running.
+2026-04-30 17:27:01,035 [INFO] Invoice: Checking model 'llama3'...
+2026-04-30 17:27:01,658 [INFO] Invoice: Ollama server is running.
+2026-04-30 17:27:01,659 [INFO] Invoice: Checking model 'llama3'...
+2026-04-30 17:27:02,031 [INFO] Invoice: Ollama server is running.
+2026-04-30 17:27:02,032 [INFO] Invoice: Checking model 'llama3'...
+2026-04-30 17:27:02,546 [INFO] Invoice: Model 'llama3' is available.
+2026-04-30 17:27:02,753 [INFO] Invoice: Model 'llama3' is available.
+2026-04-30 17:27:03,073 [INFO] Invoice: Model 'llama3' is available.
+2026-04-30 17:27:03,696 [INFO] Invoice: Model 'llama3' is available.
+2026-04-30 17:27:04,066 [INFO] Invoice: Model 'llama3' is available.
+2026-04-30 17:27:45,693 [INFO] faiss.loader: Loading faiss with AVX512 support.
+2026-04-30 17:27:45,694 [INFO] faiss.loader: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-04-30 17:27:45,694 [INFO] faiss.loader: Loading faiss with AVX2 support.
+2026-04-30 17:27:45,816 [INFO] faiss.loader: Successfully loaded faiss with AVX2 support.
+2026-04-30 17:28:05,703 [INFO] sentence_transformers.base.model: No device provided, using cpu
+2026-04-30 17:28:06,828 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:28:06,943 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-04-30 17:28:07,309 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:28:07,422 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-30 17:28:07,427 [INFO] sentence_transformers.base.model: Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-04-30 17:28:07,770 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:28:07,884 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-30 17:28:08,217 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:28:08,331 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-04-30 17:28:08,659 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:28:08,782 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-04-30 17:28:09,107 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:28:09,219 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-30 17:28:09,546 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-30 17:28:09,877 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:28:09,990 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-04-30 17:28:10,372 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:28:10,486 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-04-30 17:28:11,116 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-04-30 17:28:11,450 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-04-30 17:28:11,782 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-04-30 17:28:12,118 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-04-30 17:28:12,447 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:28:12,561 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-30 17:28:12,891 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:28:13,005 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-04-30 17:28:13,334 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:28:13,450 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-04-30 17:28:13,774 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:28:13,888 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-30 17:28:14,260 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-30 17:28:14,592 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-30 17:28:15,136 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-30 17:28:15,249 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-30 17:28:15,584 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-04-30 17:32:27,654 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-04-30 17:32:30,191 [INFO] MSA: MSA pipeline completed in 331.58s
+2026-04-30 17:32:30,192 [INFO] app: [PIPELINE DONE] MSA | status=success | time=331.58s
+2026-04-30 17:34:44,579 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-04-30 17:34:45,294 [INFO] MSA: MSA pipeline completed in 467.13s
+2026-04-30 17:34:45,295 [INFO] app: [PIPELINE DONE] MSA | status=success | time=467.13s
+2026-04-30 17:37:57,697 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-04-30 17:37:58,687 [INFO] MSA: MSA pipeline completed in 658.72s
+2026-04-30 17:37:58,687 [INFO] app: [PIPELINE DONE] MSA | status=success | time=658.72s
+2026-04-30 17:40:18,684 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-04-30 17:40:19,415 [INFO] MSA: MSA pipeline completed in 800.44s
+2026-04-30 17:40:19,416 [INFO] app: [PIPELINE DONE] MSA | status=success | time=800.44s
+2026-04-30 17:43:44,130 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-04-30 17:43:44,866 [INFO] MSA: MSA pipeline completed in 1005.31s
+2026-04-30 17:43:44,867 [INFO] app: [PIPELINE DONE] MSA | status=success | time=1005.31s
+2026-04-30 17:57:53,580 [INFO] Invoice: Invoice pipeline completed in 1853.61s
+2026-04-30 17:57:53,581 [INFO] app: [PIPELINE DONE] Invoice | status=success | time=1853.61s
+2026-04-30 17:57:53,582 [INFO] app: [PIPELINE SUCCESS] Both pipelines completed | File ID=393
+2026-04-30 17:58:24,303 [INFO] Invoice: Invoice pipeline completed in 1885.33s
+2026-04-30 17:58:24,303 [INFO] app: [PIPELINE DONE] Invoice | status=success | time=1885.33s
+2026-04-30 17:58:24,305 [INFO] app: [PIPELINE SUCCESS] Both pipelines completed | File ID=391
+2026-04-30 17:58:53,637 [INFO] Invoice: Invoice pipeline completed in 1914.08s
+2026-04-30 17:58:53,638 [INFO] app: [PIPELINE DONE] Invoice | status=success | time=1914.08s
+2026-04-30 17:58:53,638 [INFO] app: [PIPELINE SUCCESS] Both pipelines completed | File ID=392
+2026-04-30 17:59:21,397 [INFO] Invoice: Invoice pipeline completed in 1942.78s
+2026-04-30 17:59:21,399 [INFO] app: [PIPELINE DONE] Invoice | status=success | time=1942.78s
+2026-04-30 17:59:21,401 [INFO] app: [PIPELINE SUCCESS] Both pipelines completed | File ID=390
+2026-04-30 17:59:42,290 [INFO] Invoice: Invoice pipeline completed in 1964.12s
+2026-04-30 17:59:42,291 [INFO] app: [PIPELINE DONE] Invoice | status=success | time=1964.12s
+2026-04-30 17:59:42,294 [INFO] app: [PIPELINE SUCCESS] Both pipelines completed | File ID=389
+2026-04-30 18:19:21,500 [INFO] app: ----------------------------------------
+2026-04-30 18:19:21,500 [INFO] app: Document Upload Server Started
+2026-04-30 18:19:21,500 [INFO] app: URL      : http://127.0.0.1:8000
+2026-04-30 18:19:21,501 [INFO] app: Backend  : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\backend
+2026-04-30 18:19:21,501 [INFO] app: Input    : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input
+2026-04-30 18:19:21,501 [INFO] app: Temp     : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary
+2026-04-30 18:19:21,501 [INFO] app: Logs     : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\logs
+2026-04-30 18:19:21,501 [INFO] app: Pipeline : MSA + Invoice (parallel via backend/main.py)
+2026-04-30 18:19:21,502 [INFO] app: Ready.
+2026-04-30 18:19:21,502 [INFO] app: ----------------------------------------
+2026-04-30 18:19:22,550 [INFO] app: ----------------------------------------
+2026-04-30 18:19:22,550 [INFO] app: Document Upload Server Started
+2026-04-30 18:19:22,551 [INFO] app: URL      : http://127.0.0.1:8000
+2026-04-30 18:19:22,551 [INFO] app: Backend  : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\backend
+2026-04-30 18:19:22,551 [INFO] app: Input    : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\input
+2026-04-30 18:19:22,551 [INFO] app: Temp     : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary
+2026-04-30 18:19:22,551 [INFO] app: Logs     : C:\Users\ws_htu2013\Desktop\Integeration_code 1\Integeration_code\Integeration_code\frontend\logs
+2026-04-30 18:19:22,551 [INFO] app: Pipeline : MSA + Invoice (parallel via backend/main.py)
+2026-04-30 18:19:22,552 [INFO] app: Ready.
+2026-04-30 18:19:22,552 [INFO] app: ----------------------------------------
+2026-05-04 11:38:42,253 [INFO] app: ----------------------------------------
+2026-05-04 11:38:42,254 [INFO] app: Document Upload Server Started
+2026-05-04 11:38:42,254 [INFO] app: URL      : http://127.0.0.1:8000
+2026-05-04 11:38:42,255 [INFO] app: Backend  : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\Integeration_code 1\Integeration_code\Integeration_code\backend
+2026-05-04 11:38:42,255 [INFO] app: Input    : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\Integeration_code 1\Integeration_code\Integeration_code\frontend\input
+2026-05-04 11:38:42,255 [INFO] app: Temp     : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary
+2026-05-04 11:38:42,256 [INFO] app: Logs     : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\Integeration_code 1\Integeration_code\Integeration_code\frontend\logs
+2026-05-04 11:38:42,256 [INFO] app: Pipeline : MSA + Invoice (parallel via backend/main.py)
+2026-05-04 11:38:42,256 [INFO] app: Ready.
+2026-05-04 11:38:42,256 [INFO] app: ----------------------------------------
+2026-05-04 11:38:42,535 [INFO] app: [REQUEST] GET /
+2026-05-04 11:38:42,539 [INFO] app: [SUCCESS] Frontend served successfully
+2026-05-04 11:38:54,664 [INFO] app: [REQUEST] POST /upload
+2026-05-04 11:38:54,665 [INFO] app: [UPLOAD RECEIVED] Original File Name=MSA_NovaTech_CloudMinds_2024 1.pdf
+2026-05-04 11:38:54,667 [INFO] app: [TEMP SAVE SUCCESS] File=MSA_NovaTech_CloudMinds_2024_1.pdf | Temp Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\1777874934_MSA_NovaTech_CloudMinds_2024_1.pdf
+2026-05-04 11:38:54,976 [INFO] app: [VALIDATION COMPLETE] File=MSA_NovaTech_CloudMinds_2024_1.pdf | Status=VALID | Reason=All checks passed
+2026-05-04 11:38:54,978 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\Integeration_code 1\Integeration_code\Integeration_code\frontend\summary\MSA_NovaTech_CloudMinds_2024_1.pdf_3d0c9f0d-7314-4fe6-81ed-1376a8167e7c_validation.log
+2026-05-04 11:38:55,006 [INFO] app: [FILE MOVED] File=MSA_NovaTech_CloudMinds_2024_1.pdf | Final Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777874934_MSA_NovaTech_CloudMinds_2024_1_20260504_113854.pdf
+2026-05-04 11:38:55,199 [INFO] app: [DB SAVE SUCCESS] File ID=1
+2026-05-04 11:38:55,366 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=1
+2026-05-04 11:38:55,367 [INFO] app: [VALID FILE] File ID=1 | Triggering MSA + Invoice in parallel
+2026-05-04 11:38:55,367 [INFO] app: [BACKGROUND TASK ADDED] File ID=1
+2026-05-04 11:38:55,369 [INFO] app: [PIPELINE START] File ID=1 | Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777874934_MSA_NovaTech_CloudMinds_2024_1_20260504_113854.pdf
+2026-05-04 11:38:55,449 [INFO] MSA: Starting MSA pipeline | file=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777874934_MSA_NovaTech_CloudMinds_2024_1_20260504_113854.pdf | file_id=1
+2026-05-04 11:38:55,454 [INFO] Invoice: Starting Invoice pipeline | pdf=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\Integeration_code 1\Integeration_code\Integeration_code\frontend\input\success\1777874934_MSA_NovaTech_CloudMinds_2024_1_20260504_113854.pdf | file_id=1
+2026-05-04 11:38:55,539 [INFO] Invoice: Checking Ollama server...
+2026-05-04 11:38:58,380 [INFO] Invoice: Ollama server is running.
+2026-05-04 11:38:58,381 [INFO] Invoice: Checking model 'llama3'...
+2026-05-04 11:39:00,447 [INFO] Invoice: Model 'llama3' is available.
+2026-05-04 11:39:00,523 [ERROR] Invoice: Invoice pipeline FAILED after 5.07s: No module named 'pytesseract'
+2026-05-04 11:39:00,529 [INFO] app: [PIPELINE DONE] Invoice | status=failed | time=5.07s
+2026-05-04 11:40:36,574 [INFO] numexpr.utils: NumExpr defaulting to 8 threads.
+2026-05-04 11:40:50,776 [INFO] faiss.loader: Loading faiss with AVX512 support.
+2026-05-04 11:40:50,777 [INFO] faiss.loader: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-05-04 11:40:50,777 [INFO] faiss.loader: Loading faiss with AVX2 support.
+2026-05-04 11:40:50,919 [INFO] faiss.loader: Successfully loaded faiss with AVX2 support.
+2026-05-04 11:41:16,868 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-05-04 11:41:16,868 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-05-04 11:41:18,946 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-04 11:41:19,128 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-04 11:41:19,400 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-04 11:41:19,572 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-04 11:41:19,802 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-05-04 11:41:19,951 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-05-04 11:41:20,214 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-04 11:41:20,388 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-05-04 11:41:20,655 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-04 11:41:20,826 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-05-04 11:41:21,062 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-05-04 11:41:21,294 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-04 11:41:21,445 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-05-04 11:41:22,132 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-04 11:41:22,304 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-05-04 11:41:22,570 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-04 11:41:22,741 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-04 11:41:23,028 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-05-04 11:41:23,290 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-05-04 11:41:23,690 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-04 11:41:23,854 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-05-04 11:41:24,138 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-05-04 11:47:09,497 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-05-04 11:47:11,864 [INFO] MSA: MSA pipeline completed in 496.41s
+2026-05-04 11:47:11,919 [INFO] app: [PIPELINE DONE] MSA | status=success | time=496.41s
+2026-05-04 11:47:12,113 [ERROR] app: [PIPELINE FAILED] Invoice | error=No module named 'pytesseract' | File ID=1
+2026-05-05 11:24:45,288 [INFO] app: ----------------------------------------
+2026-05-05 11:24:45,289 [INFO] app: Document Upload Server Started
+2026-05-05 11:24:45,289 [INFO] app: URL      : http://127.0.0.1:8000
+2026-05-05 11:24:45,290 [INFO] app: Backend  : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\backend
+2026-05-05 11:24:45,290 [INFO] app: Input    : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input
+2026-05-05 11:24:45,290 [INFO] app: Temp     : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary
+2026-05-05 11:24:45,290 [INFO] app: Logs     : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\logs
+2026-05-05 11:24:45,290 [INFO] app: Pipeline : MSA + Invoice (parallel via backend/main.py)
+2026-05-05 11:24:45,291 [INFO] app: Ready.
+2026-05-05 11:24:45,291 [INFO] app: ----------------------------------------
+2026-05-05 11:24:57,321 [INFO] app: [REQUEST] POST /upload
+2026-05-05 11:24:57,321 [INFO] app: [UPLOAD RECEIVED] Original File Name=SOW_TCS_STC_DataMigration_2024.docx
+2026-05-05 11:24:57,324 [INFO] app: [TEMP SAVE SUCCESS] File=SOW_TCS_STC_DataMigration_2024.docx | Temp Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\1777960497_SOW_TCS_STC_DataMigration_2024.docx
+2026-05-05 11:24:57,364 [INFO] app: [VALIDATION COMPLETE] File=SOW_TCS_STC_DataMigration_2024.docx | Status=VALID | Reason=All checks passed
+2026-05-05 11:24:57,368 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\SOW_TCS_STC_DataMigration_2024.docx_9eb37a22-3624-4546-9fad-ae76b6dfeb43_validation.log
+2026-05-05 11:24:57,370 [INFO] app: [FILE MOVED] File=SOW_TCS_STC_DataMigration_2024.docx | Final Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777960497_SOW_TCS_STC_DataMigration_2024_20260505_112457.docx
+2026-05-05 11:24:57,371 [INFO] app: [DOC TYPE DETECTED] File=SOW_TCS_STC_DataMigration_2024.docx | Type=SOW
+2026-05-05 11:24:57,471 [INFO] app: [DB SAVE SUCCESS] File ID=25
+2026-05-05 11:24:57,593 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=25
+2026-05-05 11:24:57,593 [INFO] app: [VALID FILE] File ID=25 | Triggering MSA + Invoice in parallel
+2026-05-05 11:24:57,594 [INFO] app: [BACKGROUND TASK ADDED] File ID=25
+2026-05-05 11:24:57,617 [INFO] app: [PIPELINE START] File ID=25 | Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777960497_SOW_TCS_STC_DataMigration_2024_20260505_112457.docx | DocType=SOW
+2026-05-05 11:24:57,645 [INFO] SOW: Starting SOW pipeline | file=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777960497_SOW_TCS_STC_DataMigration_2024_20260505_112457.docx | file_id=25
+2026-05-05 11:25:01,057 [INFO] faiss.loader: Loading faiss with AVX512 support.
+2026-05-05 11:25:01,057 [INFO] faiss.loader: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-05-05 11:25:01,058 [INFO] faiss.loader: Loading faiss with AVX2 support.
+2026-05-05 11:25:01,245 [INFO] faiss.loader: Successfully loaded faiss with AVX2 support.
+2026-05-05 11:25:35,846 [INFO] numexpr.utils: NumExpr defaulting to 8 threads.
+2026-05-05 11:25:43,131 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-05-05 11:25:43,131 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-05-05 11:25:43,870 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:25:43,888 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-05-05 11:25:44,148 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:25:44,149 [WARNING] huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-05-05 11:25:44,167 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-05 11:25:44,413 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:25:44,426 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-05 11:25:44,701 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:25:44,719 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-05-05 11:25:44,977 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:25:45,000 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-05-05 11:25:45,272 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:25:45,288 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-05-05 11:25:45,545 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-05-05 11:25:45,799 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:25:45,827 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-05-05 11:25:46,506 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:25:46,534 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-05-05 11:25:46,783 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:25:46,800 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-05 11:25:47,076 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-05-05 11:25:47,336 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-05-05 11:25:47,785 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:25:47,802 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-05-05 11:25:48,060 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-05-05 11:26:41,820 [INFO] SOW: SOW pipeline completed in 104.17s
+2026-05-05 11:26:41,821 [INFO] app: [PIPELINE DONE] SOW | status=success | time=104.17s
+2026-05-05 11:26:41,821 [INFO] app: [PIPELINE SUCCESS] Completed | File ID=25
+2026-05-05 11:36:24,588 [INFO] app: [REQUEST] POST /upload
+2026-05-05 11:36:24,589 [INFO] app: [UPLOAD RECEIVED] Original File Name=SOW_TCS_STC_DataMigration_2024.docx
+2026-05-05 11:36:24,590 [INFO] app: [TEMP SAVE SUCCESS] File=SOW_TCS_STC_DataMigration_2024.docx | Temp Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\1777961184_SOW_TCS_STC_DataMigration_2024.docx
+2026-05-05 11:36:24,603 [INFO] app: [VALIDATION COMPLETE] File=SOW_TCS_STC_DataMigration_2024.docx | Status=VALID | Reason=All checks passed
+2026-05-05 11:36:24,606 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\SOW_TCS_STC_DataMigration_2024.docx_8ef1a35e-dba1-4482-b090-2d15c29a6a5c_validation.log
+2026-05-05 11:36:24,607 [INFO] app: [FILE MOVED] File=SOW_TCS_STC_DataMigration_2024.docx | Final Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777961184_SOW_TCS_STC_DataMigration_2024_20260505_113624.docx
+2026-05-05 11:36:24,608 [INFO] app: [DOC TYPE DETECTED] File=SOW_TCS_STC_DataMigration_2024.docx | Type=SOW
+2026-05-05 11:36:24,676 [INFO] app: [DB SAVE SUCCESS] File ID=26
+2026-05-05 11:36:24,795 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=26
+2026-05-05 11:36:24,795 [INFO] app: [VALID FILE] File ID=26 | Triggering MSA + Invoice in parallel
+2026-05-05 11:36:24,796 [INFO] app: [BACKGROUND TASK ADDED] File ID=26
+2026-05-05 11:36:24,797 [INFO] app: [PIPELINE START] File ID=26 | Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777961184_SOW_TCS_STC_DataMigration_2024_20260505_113624.docx | DocType=SOW
+2026-05-05 11:36:24,798 [INFO] SOW: Starting SOW pipeline | file=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777961184_SOW_TCS_STC_DataMigration_2024_20260505_113624.docx | file_id=26
+2026-05-05 11:38:39,800 [INFO] SOW: SOW pipeline completed in 135.00s
+2026-05-05 11:38:39,800 [INFO] app: [PIPELINE DONE] SOW | status=success | time=135.0s
+2026-05-05 11:38:39,801 [INFO] app: [PIPELINE SUCCESS] Completed | File ID=26
+2026-05-05 11:42:12,829 [INFO] app: [REQUEST] POST /upload
+2026-05-05 11:42:12,829 [INFO] app: [UPLOAD RECEIVED] Original File Name=SOW_TCS_STC_DataMigration_2024.docx
+2026-05-05 11:42:12,831 [INFO] app: [TEMP SAVE SUCCESS] File=SOW_TCS_STC_DataMigration_2024.docx | Temp Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\1777961532_SOW_TCS_STC_DataMigration_2024.docx
+2026-05-05 11:42:12,859 [INFO] app: [VALIDATION COMPLETE] File=SOW_TCS_STC_DataMigration_2024.docx | Status=VALID | Reason=All checks passed
+2026-05-05 11:42:12,861 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\SOW_TCS_STC_DataMigration_2024.docx_e0b28c86-6d7f-4968-abb0-a548d76c3a4e_validation.log
+2026-05-05 11:42:12,862 [INFO] app: [FILE MOVED] File=SOW_TCS_STC_DataMigration_2024.docx | Final Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777961532_SOW_TCS_STC_DataMigration_2024_20260505_114212.docx
+2026-05-05 11:42:12,863 [INFO] app: [DOC TYPE DETECTED] File=SOW_TCS_STC_DataMigration_2024.docx | Type=SOW
+2026-05-05 11:42:12,959 [INFO] app: [DB SAVE SUCCESS] File ID=28
+2026-05-05 11:42:13,115 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=28
+2026-05-05 11:42:13,120 [INFO] app: [VALID FILE] File ID=28 | Triggering MSA + Invoice in parallel
+2026-05-05 11:42:13,120 [INFO] app: [BACKGROUND TASK ADDED] File ID=28
+2026-05-05 11:42:13,142 [INFO] app: [PIPELINE START] File ID=28 | Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777961532_SOW_TCS_STC_DataMigration_2024_20260505_114212.docx | DocType=SOW
+2026-05-05 11:42:13,155 [INFO] SOW: Starting SOW pipeline | file=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777961532_SOW_TCS_STC_DataMigration_2024_20260505_114212.docx | file_id=28
+2026-05-05 11:42:13,593 [INFO] app: [REQUEST] POST /upload
+2026-05-05 11:42:13,593 [INFO] app: [UPLOAD RECEIVED] Original File Name=MSA_TCS_STC_DataMigration_2024.docx
+2026-05-05 11:42:13,604 [INFO] app: [TEMP SAVE SUCCESS] File=MSA_TCS_STC_DataMigration_2024.docx | Temp Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\1777961533_MSA_TCS_STC_DataMigration_2024.docx
+2026-05-05 11:42:13,645 [INFO] app: [VALIDATION COMPLETE] File=MSA_TCS_STC_DataMigration_2024.docx | Status=VALID | Reason=All checks passed
+2026-05-05 11:42:13,648 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\MSA_TCS_STC_DataMigration_2024.docx_51fc1fdb-edc0-464c-8d26-1e5604ea9670_validation.log
+2026-05-05 11:42:13,651 [INFO] app: [FILE MOVED] File=MSA_TCS_STC_DataMigration_2024.docx | Final Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777961533_MSA_TCS_STC_DataMigration_2024_20260505_114213.docx
+2026-05-05 11:42:13,654 [INFO] app: [DOC TYPE DETECTED] File=MSA_TCS_STC_DataMigration_2024.docx | Type=MSA
+2026-05-05 11:42:13,731 [INFO] app: [DB SAVE SUCCESS] File ID=29
+2026-05-05 11:42:13,839 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=29
+2026-05-05 11:42:13,840 [INFO] app: [VALID FILE] File ID=29 | Triggering MSA + Invoice in parallel
+2026-05-05 11:42:13,840 [INFO] app: [BACKGROUND TASK ADDED] File ID=29
+2026-05-05 11:42:13,842 [INFO] app: [PIPELINE START] File ID=29 | Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777961533_MSA_TCS_STC_DataMigration_2024_20260505_114213.docx | DocType=MSA
+2026-05-05 11:42:13,843 [INFO] MSA: Starting MSA pipeline | file=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777961533_MSA_TCS_STC_DataMigration_2024_20260505_114213.docx | file_id=29
+2026-05-05 11:43:23,803 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-05-05 11:43:23,803 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-05-05 11:43:26,002 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:43:26,246 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-05-05 11:43:26,587 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:43:26,829 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-05 11:43:27,152 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:43:27,402 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-05 11:43:27,739 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:43:27,966 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-05-05 11:43:28,276 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:43:28,515 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-05-05 11:43:28,852 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:43:29,596 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-05-05 11:43:29,928 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-05-05 11:43:30,266 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:43:30,498 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-05-05 11:43:30,955 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:43:31,197 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-05-05 11:43:31,532 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:43:31,762 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-05 11:43:32,091 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-05-05 11:43:32,430 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-05-05 11:43:32,902 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 11:43:33,129 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-05-05 11:43:33,453 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-05-05 11:43:34,991 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 500 Internal Server Error"
+2026-05-05 11:43:35,125 [INFO] MSA: MSA pipeline completed in 81.28s
+2026-05-05 11:43:35,127 [INFO] app: [PIPELINE DONE] MSA | status=success | time=81.28s
+2026-05-05 11:43:35,127 [INFO] app: [PIPELINE SUCCESS] Completed | File ID=29
+2026-05-05 11:44:22,843 [INFO] SOW: SOW pipeline completed in 129.67s
+2026-05-05 11:44:22,844 [INFO] app: [PIPELINE DONE] SOW | status=success | time=129.67s
+2026-05-05 11:44:22,844 [INFO] app: [PIPELINE SUCCESS] Completed | File ID=28
+2026-05-05 11:46:18,271 [INFO] app: [REQUEST] POST /upload
+2026-05-05 11:46:18,272 [INFO] app: [UPLOAD RECEIVED] Original File Name=SOW_TCS_STC_DataMigration_2024.docx
+2026-05-05 11:46:18,274 [INFO] app: [TEMP SAVE SUCCESS] File=SOW_TCS_STC_DataMigration_2024.docx | Temp Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\1777961778_SOW_TCS_STC_DataMigration_2024.docx
+2026-05-05 11:46:18,295 [INFO] app: [VALIDATION COMPLETE] File=SOW_TCS_STC_DataMigration_2024.docx | Status=VALID | Reason=All checks passed
+2026-05-05 11:46:18,297 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\SOW_TCS_STC_DataMigration_2024.docx_985f6f7d-eb4f-49b4-9a35-d9faff25f6fa_validation.log
+2026-05-05 11:46:18,300 [INFO] app: [FILE MOVED] File=SOW_TCS_STC_DataMigration_2024.docx | Final Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777961778_SOW_TCS_STC_DataMigration_2024_20260505_114618.docx
+2026-05-05 11:46:18,300 [INFO] app: [DOC TYPE DETECTED] File=SOW_TCS_STC_DataMigration_2024.docx | Type=SOW
+2026-05-05 11:46:18,377 [INFO] app: [DB SAVE SUCCESS] File ID=30
+2026-05-05 11:46:18,491 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=30
+2026-05-05 11:46:18,492 [INFO] app: [VALID FILE] File ID=30 | Triggering MSA + Invoice in parallel
+2026-05-05 11:46:18,492 [INFO] app: [BACKGROUND TASK ADDED] File ID=30
+2026-05-05 11:46:18,493 [INFO] app: [PIPELINE START] File ID=30 | Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777961778_SOW_TCS_STC_DataMigration_2024_20260505_114618.docx | DocType=SOW
+2026-05-05 11:46:18,494 [INFO] SOW: Starting SOW pipeline | file=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777961778_SOW_TCS_STC_DataMigration_2024_20260505_114618.docx | file_id=30
+2026-05-05 11:46:18,748 [INFO] app: [REQUEST] POST /upload
+2026-05-05 11:46:18,748 [INFO] app: [UPLOAD RECEIVED] Original File Name=MSA_TCS_STC_DataMigration_2024.docx
+2026-05-05 11:46:18,750 [INFO] app: [TEMP SAVE SUCCESS] File=MSA_TCS_STC_DataMigration_2024.docx | Temp Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\1777961778_MSA_TCS_STC_DataMigration_2024.docx
+2026-05-05 11:46:18,766 [INFO] app: [VALIDATION COMPLETE] File=MSA_TCS_STC_DataMigration_2024.docx | Status=VALID | Reason=All checks passed
+2026-05-05 11:46:18,768 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\MSA_TCS_STC_DataMigration_2024.docx_834d87be-8bc6-46de-aabe-627dbb0fb1e2_validation.log
+2026-05-05 11:46:18,769 [INFO] app: [FILE MOVED] File=MSA_TCS_STC_DataMigration_2024.docx | Final Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777961778_MSA_TCS_STC_DataMigration_2024_20260505_114618.docx
+2026-05-05 11:46:18,770 [INFO] app: [DOC TYPE DETECTED] File=MSA_TCS_STC_DataMigration_2024.docx | Type=MSA
+2026-05-05 11:46:18,843 [INFO] app: [DB SAVE SUCCESS] File ID=31
+2026-05-05 11:46:18,953 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=31
+2026-05-05 11:46:18,953 [INFO] app: [VALID FILE] File ID=31 | Triggering MSA + Invoice in parallel
+2026-05-05 11:46:18,953 [INFO] app: [BACKGROUND TASK ADDED] File ID=31
+2026-05-05 11:46:18,957 [INFO] app: [PIPELINE START] File ID=31 | Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777961778_MSA_TCS_STC_DataMigration_2024_20260505_114618.docx | DocType=MSA
+2026-05-05 11:46:18,958 [INFO] MSA: Starting MSA pipeline | file=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777961778_MSA_TCS_STC_DataMigration_2024_20260505_114618.docx | file_id=31
+2026-05-05 11:46:19,973 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 500 Internal Server Error"
+2026-05-05 11:46:20,109 [INFO] MSA: MSA pipeline completed in 1.15s
+2026-05-05 11:46:20,109 [INFO] app: [PIPELINE DONE] MSA | status=success | time=1.15s
+2026-05-05 11:46:20,109 [INFO] app: [PIPELINE SUCCESS] Completed | File ID=31
+2026-05-05 11:48:30,873 [INFO] SOW: SOW pipeline completed in 132.38s
+2026-05-05 11:48:30,875 [INFO] app: [PIPELINE DONE] SOW | status=success | time=132.38s
+2026-05-05 11:48:30,875 [INFO] app: [PIPELINE SUCCESS] Completed | File ID=30
+2026-05-05 12:27:14,805 [INFO] app: [REQUEST] POST /upload
+2026-05-05 12:27:14,812 [INFO] app: [UPLOAD RECEIVED] Original File Name=SOW_TCS_STC_DataMigration_2024.docx
+2026-05-05 12:27:14,818 [INFO] app: [TEMP SAVE SUCCESS] File=SOW_TCS_STC_DataMigration_2024.docx | Temp Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\1777964234_SOW_TCS_STC_DataMigration_2024.docx
+2026-05-05 12:27:14,920 [INFO] app: [VALIDATION COMPLETE] File=SOW_TCS_STC_DataMigration_2024.docx | Status=VALID | Reason=All checks passed
+2026-05-05 12:27:14,923 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\SOW_TCS_STC_DataMigration_2024.docx_9beccea1-fc0d-483b-b9b7-392c7e306d80_validation.log
+2026-05-05 12:27:14,925 [INFO] app: [FILE MOVED] File=SOW_TCS_STC_DataMigration_2024.docx | Final Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777964234_SOW_TCS_STC_DataMigration_2024_20260505_122714.docx
+2026-05-05 12:27:14,928 [INFO] app: [DOC TYPE DETECTED] File=SOW_TCS_STC_DataMigration_2024.docx | Type=SOW
+2026-05-05 12:27:15,028 [INFO] app: [DB SAVE SUCCESS] File ID=34
+2026-05-05 12:27:15,142 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=34
+2026-05-05 12:27:15,142 [INFO] app: [VALID FILE] File ID=34 | Triggering MSA + Invoice in parallel
+2026-05-05 12:27:15,143 [INFO] app: [BACKGROUND TASK ADDED] File ID=34
+2026-05-05 12:27:15,150 [INFO] app: [PIPELINE START] File ID=34 | Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777964234_SOW_TCS_STC_DataMigration_2024_20260505_122714.docx | DocType=SOW
+2026-05-05 12:27:15,157 [INFO] SOW: Starting SOW pipeline | file=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777964234_SOW_TCS_STC_DataMigration_2024_20260505_122714.docx | file_id=34
+2026-05-05 12:29:26,353 [INFO] SOW: SOW pipeline completed in 131.20s
+2026-05-05 12:29:26,354 [INFO] app: [PIPELINE DONE] SOW | status=success | time=131.2s
+2026-05-05 12:29:26,354 [INFO] app: [PIPELINE SUCCESS] Completed | File ID=34
+2026-05-05 12:33:10,195 [INFO] app: [REQUEST] POST /upload
+2026-05-05 12:33:10,197 [INFO] app: [UPLOAD RECEIVED] Original File Name=SOW_TCS_STC_DataMigration_2024.docx
+2026-05-05 12:33:10,198 [INFO] app: [TEMP SAVE SUCCESS] File=SOW_TCS_STC_DataMigration_2024.docx | Temp Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\1777964590_SOW_TCS_STC_DataMigration_2024.docx
+2026-05-05 12:33:10,219 [INFO] app: [VALIDATION COMPLETE] File=SOW_TCS_STC_DataMigration_2024.docx | Status=VALID | Reason=All checks passed
+2026-05-05 12:33:10,221 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\SOW_TCS_STC_DataMigration_2024.docx_670be8c6-cbf7-4091-ba56-3e8acab91ccd_validation.log
+2026-05-05 12:33:10,223 [INFO] app: [FILE MOVED] File=SOW_TCS_STC_DataMigration_2024.docx | Final Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777964590_SOW_TCS_STC_DataMigration_2024_20260505_123310.docx
+2026-05-05 12:33:10,223 [INFO] app: [DOC TYPE DETECTED] File=SOW_TCS_STC_DataMigration_2024.docx | Type=SOW
+2026-05-05 12:33:10,310 [INFO] app: [DB SAVE SUCCESS] File ID=36
+2026-05-05 12:33:10,434 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=36
+2026-05-05 12:33:10,434 [INFO] app: [VALID FILE] File ID=36 | Triggering MSA + Invoice in parallel
+2026-05-05 12:33:10,435 [INFO] app: [BACKGROUND TASK ADDED] File ID=36
+2026-05-05 12:33:10,436 [INFO] app: [PIPELINE START] File ID=36 | Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777964590_SOW_TCS_STC_DataMigration_2024_20260505_123310.docx | DocType=SOW
+2026-05-05 12:33:10,437 [INFO] SOW: Starting SOW pipeline | file=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777964590_SOW_TCS_STC_DataMigration_2024_20260505_123310.docx | file_id=36
+2026-05-05 12:35:18,988 [INFO] SOW: SOW pipeline completed in 128.55s
+2026-05-05 12:35:18,989 [INFO] app: [PIPELINE DONE] SOW | status=success | time=128.55s
+2026-05-05 12:35:18,989 [INFO] app: [PIPELINE SUCCESS] Completed | File ID=36
+2026-05-05 15:11:52,719 [INFO] app: ----------------------------------------
+2026-05-05 15:11:52,720 [INFO] app: Document Upload Server Started
+2026-05-05 15:11:52,720 [INFO] app: URL      : http://127.0.0.1:8000
+2026-05-05 15:11:52,720 [INFO] app: Backend  : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\backend
+2026-05-05 15:11:52,720 [INFO] app: Input    : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input
+2026-05-05 15:11:52,721 [INFO] app: Temp     : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary
+2026-05-05 15:11:52,721 [INFO] app: Logs     : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\logs
+2026-05-05 15:11:52,721 [INFO] app: Pipeline : MSA + Invoice (parallel via backend/main.py)
+2026-05-05 15:11:52,721 [INFO] app: Ready.
+2026-05-05 15:11:52,721 [INFO] app: ----------------------------------------
+2026-05-05 15:12:20,151 [INFO] app: [REQUEST] POST /upload
+2026-05-05 15:12:20,152 [INFO] app: [UPLOAD RECEIVED] Original File Name=INV-001_STC_TCS_DataMigration_2024.docx
+2026-05-05 15:12:20,153 [INFO] app: [TEMP SAVE SUCCESS] File=INV-001_STC_TCS_DataMigration_2024.docx | Temp Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\1777974140_INV-001_STC_TCS_DataMigration_2024.docx
+2026-05-05 15:12:20,186 [INFO] app: [VALIDATION COMPLETE] File=INV-001_STC_TCS_DataMigration_2024.docx | Status=VALID | Reason=All checks passed
+2026-05-05 15:12:20,188 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\INV-001_STC_TCS_DataMigration_2024.docx_af4e71ac-a41a-42a6-aedc-b83ac47b3bbe_validation.log
+2026-05-05 15:12:20,191 [INFO] app: [FILE MOVED] File=INV-001_STC_TCS_DataMigration_2024.docx | Final Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777974140_INV-001_STC_TCS_DataMigration_2024_20260505_151220.docx
+2026-05-05 15:12:20,193 [INFO] app: [DOC TYPE DETECTED] File=INV-001_STC_TCS_DataMigration_2024.docx | Type=INVOICE
+2026-05-05 15:12:41,231 [ERROR] app: [UPLOAD PROCESS FAILED] Error=connection to server at "10.1.1.53", port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+Traceback (most recent call last):
+  File "C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\app.py", line 256, in upload_file
+    file_id = save_file_record(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\db.py", line 41, in save_file_record
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\db.py", line 4, in get_connection
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ws_htu769\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "10.1.1.53", port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-05-05 15:12:41,447 [INFO] app: [REQUEST] POST /upload
+2026-05-05 15:12:41,447 [INFO] app: [UPLOAD RECEIVED] Original File Name=MSA_TCS_STC_DataMigration_2024.docx
+2026-05-05 15:12:41,449 [INFO] app: [TEMP SAVE SUCCESS] File=MSA_TCS_STC_DataMigration_2024.docx | Temp Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\1777974161_MSA_TCS_STC_DataMigration_2024.docx
+2026-05-05 15:12:41,460 [INFO] app: [VALIDATION COMPLETE] File=MSA_TCS_STC_DataMigration_2024.docx | Status=VALID | Reason=All checks passed
+2026-05-05 15:12:41,463 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\MSA_TCS_STC_DataMigration_2024.docx_a7a0ec81-3b99-4a1a-b9d7-98bd7406cdf4_validation.log
+2026-05-05 15:12:41,464 [INFO] app: [FILE MOVED] File=MSA_TCS_STC_DataMigration_2024.docx | Final Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777974161_MSA_TCS_STC_DataMigration_2024_20260505_151241.docx
+2026-05-05 15:12:41,465 [INFO] app: [DOC TYPE DETECTED] File=MSA_TCS_STC_DataMigration_2024.docx | Type=MSA
+2026-05-05 15:13:02,489 [ERROR] app: [UPLOAD PROCESS FAILED] Error=connection to server at "10.1.1.53", port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+Traceback (most recent call last):
+  File "C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\app.py", line 256, in upload_file
+    file_id = save_file_record(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\db.py", line 41, in save_file_record
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\db.py", line 4, in get_connection
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ws_htu769\AppData\Local\Programs\Python\Python312\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "10.1.1.53", port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-05-05 15:16:14,909 [INFO] app: [REQUEST] POST /upload
+2026-05-05 15:16:14,910 [INFO] app: [UPLOAD RECEIVED] Original File Name=SOW_TCS_STC_DataMigration_2024.docx
+2026-05-05 15:16:14,912 [INFO] app: [TEMP SAVE SUCCESS] File=SOW_TCS_STC_DataMigration_2024.docx | Temp Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\1777974374_SOW_TCS_STC_DataMigration_2024.docx
+2026-05-05 15:16:14,926 [INFO] app: [VALIDATION COMPLETE] File=SOW_TCS_STC_DataMigration_2024.docx | Status=VALID | Reason=All checks passed
+2026-05-05 15:16:14,927 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\SOW_TCS_STC_DataMigration_2024.docx_df4ae758-e748-4f1c-89e5-9c684d826ed6_validation.log
+2026-05-05 15:16:14,929 [INFO] app: [FILE MOVED] File=SOW_TCS_STC_DataMigration_2024.docx | Final Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777974374_SOW_TCS_STC_DataMigration_2024_20260505_151614.docx
+2026-05-05 15:16:14,929 [INFO] app: [DOC TYPE DETECTED] File=SOW_TCS_STC_DataMigration_2024.docx | Type=SOW
+2026-05-05 15:16:15,024 [INFO] app: [DB SAVE SUCCESS] File ID=58
+2026-05-05 15:16:15,134 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=58
+2026-05-05 15:16:15,134 [INFO] app: [VALID FILE] File ID=58 | Triggering MSA + Invoice in parallel
+2026-05-05 15:16:15,135 [INFO] app: [BACKGROUND TASK ADDED] File ID=58
+2026-05-05 15:16:15,147 [INFO] app: [PIPELINE START] File ID=58 | Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777974374_SOW_TCS_STC_DataMigration_2024_20260505_151614.docx | DocType=SOW
+2026-05-05 15:16:15,157 [INFO] SOW: Starting SOW pipeline | file=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777974374_SOW_TCS_STC_DataMigration_2024_20260505_151614.docx | file_id=58
+2026-05-05 15:16:15,387 [INFO] app: [REQUEST] POST /upload
+2026-05-05 15:16:15,388 [INFO] app: [UPLOAD RECEIVED] Original File Name=MSA_TCS_STC_DataMigration_2024.docx
+2026-05-05 15:16:15,389 [INFO] app: [TEMP SAVE SUCCESS] File=MSA_TCS_STC_DataMigration_2024.docx | Temp Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\1777974375_MSA_TCS_STC_DataMigration_2024.docx
+2026-05-05 15:16:15,413 [INFO] app: [VALIDATION COMPLETE] File=MSA_TCS_STC_DataMigration_2024.docx | Status=VALID | Reason=All checks passed
+2026-05-05 15:16:15,415 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\MSA_TCS_STC_DataMigration_2024.docx_2d30ae75-e6d9-4007-9989-fceaa7100080_validation.log
+2026-05-05 15:16:15,417 [INFO] app: [FILE MOVED] File=MSA_TCS_STC_DataMigration_2024.docx | Final Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777974375_MSA_TCS_STC_DataMigration_2024_20260505_151615.docx
+2026-05-05 15:16:15,417 [INFO] app: [DOC TYPE DETECTED] File=MSA_TCS_STC_DataMigration_2024.docx | Type=MSA
+2026-05-05 15:16:15,496 [INFO] app: [DB SAVE SUCCESS] File ID=59
+2026-05-05 15:16:15,614 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=59
+2026-05-05 15:16:15,615 [INFO] app: [VALID FILE] File ID=59 | Triggering MSA + Invoice in parallel
+2026-05-05 15:16:15,615 [INFO] app: [BACKGROUND TASK ADDED] File ID=59
+2026-05-05 15:16:15,628 [INFO] app: [PIPELINE START] File ID=59 | Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777974375_MSA_TCS_STC_DataMigration_2024_20260505_151615.docx | DocType=MSA
+2026-05-05 15:16:15,630 [INFO] MSA: Starting MSA pipeline | file=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777974375_MSA_TCS_STC_DataMigration_2024_20260505_151615.docx | file_id=59
+2026-05-05 15:16:16,977 [INFO] faiss.loader: Loading faiss with AVX512 support.
+2026-05-05 15:16:16,978 [INFO] faiss.loader: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-05-05 15:16:16,978 [INFO] faiss.loader: Loading faiss with AVX2 support.
+2026-05-05 15:16:17,126 [INFO] faiss.loader: Successfully loaded faiss with AVX2 support.
+2026-05-05 15:16:38,845 [INFO] numexpr.utils: NumExpr defaulting to 8 threads.
+2026-05-05 15:16:47,706 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-05-05 15:16:47,707 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-05-05 15:16:48,562 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:16:48,580 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-05-05 15:16:48,828 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:16:48,845 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-05 15:16:49,135 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:16:49,150 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-05 15:16:49,392 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:16:49,409 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-05-05 15:16:49,653 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:16:49,670 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-05-05 15:16:49,920 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:16:49,936 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-05-05 15:16:50,186 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-05-05 15:16:50,448 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:16:50,464 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-05-05 15:16:51,610 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:16:51,637 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-05-05 15:16:51,885 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:16:51,901 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-05 15:16:52,162 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-05-05 15:16:52,410 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-05-05 15:16:52,855 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:16:52,870 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-05-05 15:16:53,159 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-05-05 15:16:57,998 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-05-05 15:16:57,998 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-05-05 15:16:58,246 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:16:58,262 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-05-05 15:16:58,504 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:16:58,520 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-05 15:16:58,764 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:16:58,779 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-05 15:16:59,023 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:16:59,038 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-05-05 15:16:59,282 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:16:59,297 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-05-05 15:16:59,539 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:16:59,555 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-05-05 15:16:59,795 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-05-05 15:17:00,036 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:17:00,053 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-05-05 15:17:00,436 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:17:00,451 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-05-05 15:17:00,696 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:17:00,711 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-05 15:17:00,964 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-05-05 15:17:01,210 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-05-05 15:17:01,543 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 15:17:01,561 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-05-05 15:17:01,809 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-05-05 15:19:29,549 [INFO] SOW: SOW pipeline completed in 194.39s
+2026-05-05 15:19:29,564 [INFO] app: [PIPELINE DONE] SOW | status=success | time=194.39s
+2026-05-05 15:19:29,613 [INFO] app: [PIPELINE SUCCESS] Completed | File ID=58
+2026-05-05 15:22:29,689 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-05-05 15:22:31,709 [INFO] MSA: MSA pipeline completed in 376.08s
+2026-05-05 15:22:31,717 [INFO] app: [PIPELINE DONE] MSA | status=success | time=376.08s
+2026-05-05 15:22:31,886 [INFO] app: [PIPELINE SUCCESS] Completed | File ID=59
+2026-05-05 15:28:11,423 [INFO] app: ----------------------------------------
+2026-05-05 15:28:11,424 [INFO] app: Document Upload Server Started
+2026-05-05 15:28:11,424 [INFO] app: URL      : http://127.0.0.1:8000
+2026-05-05 15:28:11,425 [INFO] app: Backend  : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\backend
+2026-05-05 15:28:11,425 [INFO] app: Input    : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input
+2026-05-05 15:28:11,425 [INFO] app: Temp     : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary
+2026-05-05 15:28:11,426 [INFO] app: Logs     : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\logs
+2026-05-05 15:28:11,426 [INFO] app: Pipeline : MSA + Invoice (parallel via backend/main.py)
+2026-05-05 15:28:11,426 [INFO] app: Ready.
+2026-05-05 15:28:11,427 [INFO] app: ----------------------------------------
+2026-05-05 16:05:08,652 [INFO] app: [REQUEST] POST /upload
+2026-05-05 16:05:08,654 [INFO] app: [UPLOAD RECEIVED] Original File Name=SOW_TCS_STC_DataMigration_2024.docx
+2026-05-05 16:05:08,656 [INFO] app: [TEMP SAVE SUCCESS] File=SOW_TCS_STC_DataMigration_2024.docx | Temp Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\1777977308_SOW_TCS_STC_DataMigration_2024.docx
+2026-05-05 16:05:08,704 [INFO] app: [VALIDATION COMPLETE] File=SOW_TCS_STC_DataMigration_2024.docx | Status=VALID | Reason=All checks passed
+2026-05-05 16:05:08,706 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\SOW_TCS_STC_DataMigration_2024.docx_2dc1b83d-6ac6-4806-9b7a-0214fe7f6f9f_validation.log
+2026-05-05 16:05:08,710 [INFO] app: [FILE MOVED] File=SOW_TCS_STC_DataMigration_2024.docx | Final Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777977308_SOW_TCS_STC_DataMigration_2024_20260505_160508.docx
+2026-05-05 16:05:08,710 [INFO] app: [DOC TYPE DETECTED] File=SOW_TCS_STC_DataMigration_2024.docx | Type=SOW
+2026-05-05 16:05:08,855 [INFO] app: [DB SAVE SUCCESS] File ID=76
+2026-05-05 16:05:08,966 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=76
+2026-05-05 16:05:08,966 [INFO] app: [VALID FILE] File ID=76 | Triggering MSA + Invoice in parallel
+2026-05-05 16:05:08,967 [INFO] app: [BACKGROUND TASK ADDED] File ID=76
+2026-05-05 16:05:08,995 [INFO] app: [PIPELINE START] File ID=76 | Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777977308_SOW_TCS_STC_DataMigration_2024_20260505_160508.docx | DocType=SOW
+2026-05-05 16:05:09,014 [INFO] SOW: Starting SOW pipeline | file=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777977308_SOW_TCS_STC_DataMigration_2024_20260505_160508.docx | file_id=76
+2026-05-05 16:05:09,232 [INFO] app: [REQUEST] POST /upload
+2026-05-05 16:05:09,233 [INFO] app: [UPLOAD RECEIVED] Original File Name=MSA_TCS_STC_DataMigration_2024.docx
+2026-05-05 16:05:09,234 [INFO] app: [TEMP SAVE SUCCESS] File=MSA_TCS_STC_DataMigration_2024.docx | Temp Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\1777977309_MSA_TCS_STC_DataMigration_2024.docx
+2026-05-05 16:05:09,255 [INFO] app: [VALIDATION COMPLETE] File=MSA_TCS_STC_DataMigration_2024.docx | Status=VALID | Reason=All checks passed
+2026-05-05 16:05:09,257 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\MSA_TCS_STC_DataMigration_2024.docx_545d3a7b-5fa7-4ba1-877c-ee475cf8abec_validation.log
+2026-05-05 16:05:09,265 [INFO] app: [FILE MOVED] File=MSA_TCS_STC_DataMigration_2024.docx | Final Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777977309_MSA_TCS_STC_DataMigration_2024_20260505_160509.docx
+2026-05-05 16:05:09,265 [INFO] app: [DOC TYPE DETECTED] File=MSA_TCS_STC_DataMigration_2024.docx | Type=MSA
+2026-05-05 16:05:09,347 [INFO] app: [DB SAVE SUCCESS] File ID=77
+2026-05-05 16:05:09,452 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=77
+2026-05-05 16:05:09,452 [INFO] app: [VALID FILE] File ID=77 | Triggering MSA + Invoice in parallel
+2026-05-05 16:05:09,453 [INFO] app: [BACKGROUND TASK ADDED] File ID=77
+2026-05-05 16:05:09,454 [INFO] app: [PIPELINE START] File ID=77 | Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777977309_MSA_TCS_STC_DataMigration_2024_20260505_160509.docx | DocType=MSA
+2026-05-05 16:05:09,459 [INFO] MSA: Starting MSA pipeline | file=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777977309_MSA_TCS_STC_DataMigration_2024_20260505_160509.docx | file_id=77
+2026-05-05 16:05:11,419 [INFO] faiss.loader: Loading faiss with AVX512 support.
+2026-05-05 16:05:11,420 [INFO] faiss.loader: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-05-05 16:05:11,420 [INFO] faiss.loader: Loading faiss with AVX2 support.
+2026-05-05 16:05:11,599 [INFO] faiss.loader: Successfully loaded faiss with AVX2 support.
+2026-05-05 16:05:44,794 [INFO] numexpr.utils: NumExpr defaulting to 8 threads.
+2026-05-05 16:05:57,169 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-05-05 16:05:57,170 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-05-05 16:05:58,963 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:05:59,094 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-05-05 16:05:59,373 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:05:59,504 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-05 16:05:59,733 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:05:59,863 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-05 16:06:00,081 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:06:00,212 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-05-05 16:06:00,430 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:06:00,558 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-05-05 16:06:00,777 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:06:00,910 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-05-05 16:06:01,137 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-05-05 16:06:01,361 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:06:01,493 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-05-05 16:06:02,399 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:06:02,529 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-05-05 16:06:02,749 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:06:02,879 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-05 16:06:03,131 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-05-05 16:06:03,354 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-05-05 16:06:03,834 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:06:03,964 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-05-05 16:06:04,192 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-05-05 16:06:04,222 [INFO] sow_main: [QUEUE] Waiting for processing slot: 1777977308_SOW_TCS_STC_DataMigration_2024_20260505_160508.docx
+2026-05-05 16:06:04,229 [INFO] sow_main: ============================================================
+2026-05-05 16:06:04,232 [INFO] sow_main: SOW EXTRACTION PIPELINE  v4 + Ollama LLM + FAISS
+2026-05-05 16:06:04,237 [INFO] sow_main: File: 1777977308_SOW_TCS_STC_DataMigration_2024_20260505_160508.docx
+2026-05-05 16:06:04,243 [INFO] sow_main: ============================================================
+2026-05-05 16:06:04,249 [INFO] sow_main: [STEP 1] Extracting text from document...
+2026-05-05 16:06:04,252 [INFO] sow_main:   Word document detected
+2026-05-05 16:06:04,331 [INFO] sow_main:   161 paragraphs, 14146 chars extracted
+2026-05-05 16:06:04,331 [INFO] sow_main: [STEP 2] Extracting structured fields (rule-based)...
+2026-05-05 16:06:04,442 [INFO] sow_main:   [OK] sow_id                 SOW-TCS-STC-DM-2024-001
+2026-05-05 16:06:04,443 [INFO] sow_main:   [OK] reference_msa          MSA-TCS-STC-2024-001
+2026-05-05 16:06:04,444 [INFO] sow_main:   [OK] vendor_id              VND-TCS-2024-007
+2026-05-05 16:06:04,444 [INFO] sow_main:   [OK] vendor_name            Tata Consultancy Services Limited (TCS)
+2026-05-05 16:06:04,444 [INFO] sow_main:   [OK] client_name            Saudi Telecom Company (STC)
+2026-05-05 16:06:04,445 [INFO] sow_main:   [OK] project_title          Enterprise Data Migration – STC Core Systems
+2026-05-05 16:06:04,445 [INFO] sow_main:   [OK] start_date             February 01, 2024
+2026-05-05 16:06:04,445 [INFO] sow_main:   [OK] end_date               January 31, 2025
+2026-05-05 16:06:04,445 [INFO] sow_main:   [OK] payment_terms          Net 30 days from milestone invoice receipt
+2026-05-05 16:06:04,445 [INFO] sow_main:   [OK] currency               USD (United States Dollar)
+2026-05-05 16:06:04,446 [INFO] sow_main:   [OK] status                 Active
+2026-05-05 16:06:04,446 [INFO] sow_main:   [OK] total_amount           $950,000
+2026-05-05 16:06:04,447 [INFO] sow_main: [STEP 3] Extracting unstructured fields (rule-based)...
+2026-05-05 16:06:04,472 [INFO] sow_main:   [FOUND    ] service_description        (961 chars)
+2026-05-05 16:06:04,477 [INFO] sow_main:   [FOUND    ] scope_of_work              (342 chars)
+2026-05-05 16:06:04,477 [INFO] sow_main:   [FOUND    ] deliverables               (391 chars)
+2026-05-05 16:06:04,478 [INFO] sow_main:   [FOUND    ] payment_schedule           (514 chars)
+2026-05-05 16:06:04,478 [INFO] sow_main:   [NOT FOUND] resource_requirements      
+2026-05-05 16:06:04,479 [INFO] sow_main:   [FOUND    ] acceptance_criteria        (729 chars)
+2026-05-05 16:06:04,479 [INFO] sow_main:   [FOUND    ] termination_clause         (755 chars)
+2026-05-05 16:06:04,479 [INFO] sow_main:   Rule-based Extraction Rate: 18/19 fields (94.7%)
+2026-05-05 16:06:04,480 [INFO] sow_main: [STEP 4] Enriching with Ollama LLM (llama3)...
+2026-05-05 16:06:10,164 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-05-05 16:06:10,164 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-05-05 16:06:10,768 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:06:10,896 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-05-05 16:06:11,113 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:06:11,241 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-05 16:06:11,456 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:06:11,583 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-05 16:06:11,799 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:06:11,928 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-05-05 16:06:12,144 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:06:12,276 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-05-05 16:06:12,503 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:06:12,632 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-05-05 16:06:12,856 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-05-05 16:06:13,082 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:06:13,211 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-05-05 16:06:13,548 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:06:13,682 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-05-05 16:06:13,904 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:06:14,049 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-05 16:06:14,270 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-05-05 16:06:14,494 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-05-05 16:06:14,798 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-05 16:06:14,928 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-05-05 16:06:15,149 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-05-05 16:06:15,159 [INFO] msa_main: Processing: C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777977309_MSA_TCS_STC_DataMigration_2024_20260505_160509.docx
+2026-05-05 16:06:15,160 [INFO] msa_main: File ID: 77
+2026-05-05 16:06:15,230 [INFO] msa_main: Digital PDF
+2026-05-05 16:06:15,258 [INFO] msa_main: Rule-based extraction done: {'start_date': 'January 01, 2024', 'currency': 'USD', 'created_by': 'Procurement Office, Saudi Telecom Company (STC)', 'termination_clause': "Either party may terminate this Agreement or any SOW for cause\nupon thirty (30) days' written notice if the other party materially\nbreaches this Agreement and fails to cure such breach within such\nperiod. STC may terminate any SOW for convenience upon sixty\n(60) days' written notice.\nUpon termination, each party shall:\nPromptly return or securely destroy all Confidential Information of\nthe other p", 'intellectual_property': 'RIGHTS', 'dispute_resolution': '12.1 Good-Faith Negotiation\nIn the event of any dispute arising out of or relating to this\nAgreement, the parties shall first attempt resolution through good-\nfaith negotiation between senior representatives within thirty (30)\ndays of written notice detailing the nature of the dispute.', 'confidentiality': 'NON-DISCLOSURE TERMS', 'liability_clause': 'LIMITATION OF LIABILITY', 'indemnification_clause': 'Vendor takes full responsibility for any mishap due to their product,\nservice, or personnel.', 'vendor_name': 'Tata Consultancy Services Limited (TCS)', 'vendor_id': 'VND-TCS-2024-007', 'end_date': 'December 31, 2026', 'payment_terms': 'Net 30 days from invoice receipt', 'status': 'Active', 'msa_id': 'msa tcs stc 2024 001 date january 01 2024'}
+2026-05-05 16:08:19,223 [INFO] sow_main:   After LLM Enrichment Rate: 18/19 fields (94.7%)
+2026-05-05 16:08:19,223 [INFO] sow_main: [STEP 4.5] Cleaning extracted fields...
+2026-05-05 16:08:19,264 [INFO] sow_main: [STEP 5] Running combined match check (Postgres + FAISS)...
+2026-05-05 16:08:19,512 [INFO] sow_main:   Updated SOW detected — deactivating old Postgres record...
+2026-05-05 16:08:19,664 [INFO] sow_main: [STEP 6] Saving structured data to PostgreSQL...
+2026-05-05 16:08:20,174 [INFO] sow_main:   DB ACTION : UPDATE | sow_id: SOW-TCS-STC-DM-2024-001
+2026-05-05 16:08:20,174 [INFO] sow_main: [STEP 7] Saving unstructured data to FAISS...
+2026-05-05 16:08:34,593 [INFO] sow_main: ============================================================
+2026-05-05 16:08:34,594 [INFO] sow_main: DONE
+2026-05-05 16:08:34,594 [INFO] sow_main: ============================================================
+2026-05-05 16:08:34,595 [INFO] SOW: SOW pipeline completed in 205.58s
+2026-05-05 16:08:34,597 [INFO] app: [PIPELINE DONE] SOW | status=success | time=205.58s
+2026-05-05 16:08:34,601 [INFO] app: [PIPELINE SUCCESS] Completed | File ID=76
+2026-05-05 16:12:29,980 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-05-05 16:12:30,084 [INFO] msa_main: RAW LLM RESPONSE: {
+  "structured": {
+    "vendor_name": "Tata Consultancy Services Limited (TCS)",
+    "vendor_id": "VND-TCS-2024-007",
+    "start_date": "January 01, 2024",
+    "end_date": "December 31, 2026",
+    "currency": "USD",
+    "status": "Active",
+    "created_by": "Procurement Office, Saudi Telecom Company (STC)",
+    "payment_terms": "Net 30 days from invoice receipt",
+    "termination_clause": "Either party may terminate this Agreement or any SOW for cause upon thirty (30) days' written notice if the other party materially breaches this Agreement and fails to cure such breach within such period. STC may terminate any SOW for convenience upon sixty (60) days' written notice.\nUpon termination, each party shall:\nPromptly return or securely destroy all Confidential Information of the other party.",
+    "msa_id": "MSA-TCS-STC-2024-001"
+  },
+  "unstructured": {
+    "intellectual_property": "RIGHTS",
+    "dispute_resolution": "12.1 Good-Faith Negotiation\nIn the event of any dispute arising out of or relating to this Agreement, the parties shall first attempt resolution through good-faith negotiation between senior representatives within thirty (30) days of written notice detailing the nature of the dispute.",
+    "confidentiality": "NON-DISCLOSURE TERMS",
+    "liability_clause": "LIMITATION OF LIABILITY",
+    "indemnification_clause": "Vendor takes full responsibility for any mishap due to their product, service, or personnel."
+  }
+}
+2026-05-05 16:12:30,096 [INFO] msa_main: CLEANED DATA: {'structured': {'vendor_name': 'Tata Consultancy Services Limited (TCS)', 'vendor_id': 'VND-TCS-2024-007', 'start_date': 'January 01, 2024', 'end_date': 'December 31, 2026', 'currency': 'USD', 'status': 'Active', 'created_by': 'Procurement Office, Saudi Telecom Company (STC)', 'payment_terms': 'Net 30 days from invoice receipt', 'termination_clause': "Either party may terminate this Agreement or any SOW for cause upon thirty (30) days' written notice if the other party materially breaches this Agreement and fails to cure such breach within such period. STC may terminate any SOW for convenience upon sixty (60) days' written notice.\nUpon termination, each party shall:\nPromptly return or securely destroy all Confidential Information of the other party.", 'msa_id': 'MSA-TCS-STC-2024-001'}, 'unstructured': {'intellectual_property': 'RIGHTS', 'dispute_resolution': '12.1 Good-Faith Negotiation\nIn the event of any dispute arising out of or relating to this Agreement, the parties shall first attempt resolution through good-faith negotiation between senior representatives within thirty (30) days of written notice detailing the nature of the dispute.', 'confidentiality': 'NON-DISCLOSURE TERMS', 'liability_clause': 'LIMITATION OF LIABILITY', 'indemnification_clause': 'Vendor takes full responsibility for any mishap due to their product, service, or personnel.'}}
+2026-05-05 16:12:30,102 [INFO] msa_main: VALIDATED DATA: {'structured': {'vendor_name': 'Tata Consultancy Services Limited (TCS)', 'vendor_id': 'VND-TCS-2024-007', 'start_date': 'January 01, 2024', 'end_date': 'December 31, 2026', 'currency': 'USD', 'status': 'Active', 'created_by': 'Procurement Office, Saudi Telecom Company (STC)', 'payment_terms': 'Net 30 days from invoice receipt', 'termination_clause': "Either party may terminate this Agreement or any SOW for cause upon thirty (30) days' written notice if the other party materially breaches this Agreement and fails to cure such breach within such period. STC may terminate any SOW for convenience upon sixty (60) days' written notice.\nUpon termination, each party shall:\nPromptly return or securely destroy all Confidential Information of the other party.", 'msa_id': 'MSA-TCS-STC-2024-001'}, 'unstructured': {'intellectual_property': 'RIGHTS', 'dispute_resolution': '12.1 Good-Faith Negotiation\nIn the event of any dispute arising out of or relating to this Agreement, the parties shall first attempt resolution through good-faith negotiation between senior representatives within thirty (30) days of written notice detailing the nature of the dispute.', 'confidentiality': 'NON-DISCLOSURE TERMS', 'liability_clause': 'LIMITATION OF LIABILITY', 'indemnification_clause': 'Vendor takes full responsibility for any mishap due to their product, service, or personnel.'}}
+2026-05-05 16:12:30,290 [INFO] msa_main: SUMMARY: [{'document_type': 'MSA', 'field_name': 'vendor_name', 'field_values': 'Tata Consultancy Services Limited (TCS)', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'vendor_id', 'field_values': 'VND-TCS-2024-007', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'start_date', 'field_values': 'January 01, 2024', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'end_date', 'field_values': 'December 31, 2026', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'currency', 'field_values': 'USD', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'status', 'field_values': 'Active', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'created_by', 'field_values': 'Procurement Office, Saudi Telecom Company (STC)', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'payment_terms', 'field_values': 'Net 30 days from invoice receipt', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'termination_clause', 'field_values': "Either party may terminate this Agreement or any SOW for cause upon thirty (30) days' written notice if the other party materially breaches this Agreement and fails to cure such breach within such period. STC may terminate any SOW for convenience upon sixty (60) days' written notice.\nUpon termination, each party shall:\nPromptly return or securely destroy all Confidential Information of the other party.", 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'msa_id', 'field_values': 'MSA-TCS-STC-2024-001', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'intellectual_property', 'field_values': 'RIGHTS', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'dispute_resolution', 'field_values': '12.1 Good-Faith Negotiation\nIn the event of any dispute arising out of or relating to this Agreement, the parties shall first attempt resolution through good-faith negotiation between senior representatives within thirty (30) days of written notice detailing the nature of the dispute.', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'confidentiality', 'field_values': 'NON-DISCLOSURE TERMS', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'liability_clause', 'field_values': 'LIMITATION OF LIABILITY', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'indemnification_clause', 'field_values': 'Vendor takes full responsibility for any mishap due to their product, service, or personnel.', 'field_status': 'Valid'}]
+2026-05-05 16:12:32,538 [INFO] msa_main: Done!
+2026-05-05 16:12:32,540 [INFO] MSA: MSA pipeline completed in 443.08s
+2026-05-05 16:12:32,550 [INFO] app: [PIPELINE DONE] MSA | status=success | time=443.08s
+2026-05-05 16:12:32,718 [INFO] app: [PIPELINE SUCCESS] Completed | File ID=77
+2026-05-05 16:16:16,123 [INFO] app: ----------------------------------------
+2026-05-05 16:16:16,123 [INFO] app: Document Upload Server Started
+2026-05-05 16:16:16,124 [INFO] app: URL      : http://127.0.0.1:8000
+2026-05-05 16:16:16,124 [INFO] app: Backend  : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\backend
+2026-05-05 16:16:16,124 [INFO] app: Input    : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input
+2026-05-05 16:16:16,124 [INFO] app: Temp     : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary
+2026-05-05 16:16:16,124 [INFO] app: Logs     : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\logs
+2026-05-05 16:16:16,125 [INFO] app: Pipeline : MSA + Invoice (parallel via backend/main.py)
+2026-05-05 16:16:16,125 [INFO] app: Ready.
+2026-05-05 16:16:16,125 [INFO] app: ----------------------------------------
+2026-05-05 16:16:31,307 [INFO] app: [REQUEST] POST /upload
+2026-05-05 16:16:31,308 [INFO] app: [UPLOAD RECEIVED] Original File Name=SOW_TCS_STC_DataMigration_2024.docx
+2026-05-05 16:16:31,312 [INFO] app: [TEMP SAVE SUCCESS] File=SOW_TCS_STC_DataMigration_2024.docx | Temp Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\1777977991_SOW_TCS_STC_DataMigration_2024.docx
+2026-05-05 16:16:31,386 [INFO] app: [VALIDATION COMPLETE] File=SOW_TCS_STC_DataMigration_2024.docx | Status=VALID | Reason=All checks passed
+2026-05-05 16:16:31,389 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\SOW_TCS_STC_DataMigration_2024.docx_315ff062-2da5-46d2-bc60-3854ebf329c4_validation.log
+2026-05-05 16:16:31,395 [INFO] app: [FILE MOVED] File=SOW_TCS_STC_DataMigration_2024.docx | Final Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777977991_SOW_TCS_STC_DataMigration_2024_20260505_161631.docx
+2026-05-05 16:16:31,398 [INFO] app: [DOC TYPE DETECTED] File=SOW_TCS_STC_DataMigration_2024.docx | Type=SOW
+2026-05-05 16:16:31,502 [INFO] app: [DB SAVE SUCCESS] File ID=78
+2026-05-05 16:16:31,648 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=78
+2026-05-05 16:16:31,649 [INFO] app: [VALID FILE] File ID=78 | Triggering MSA + Invoice in parallel
+2026-05-05 16:16:31,649 [INFO] app: [BACKGROUND TASK ADDED] File ID=78
+2026-05-05 16:16:31,678 [INFO] app: [PIPELINE START] File ID=78 | Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777977991_SOW_TCS_STC_DataMigration_2024_20260505_161631.docx | DocType=SOW
+2026-05-05 16:16:31,696 [INFO] main: ======================================================================
+2026-05-05 16:16:31,697 [INFO] main: [SOW]  STARTED  |  File ID: 78  |  1777977991_SOW_TCS_STC_DataMigration_2024_20260505_161631.docx
+2026-05-05 16:16:31,697 [INFO] main: ======================================================================
+2026-05-05 16:16:32,172 [INFO] app: [REQUEST] POST /upload
+2026-05-05 16:16:32,174 [INFO] app: [UPLOAD RECEIVED] Original File Name=MSA_TCS_STC_DataMigration_2024.docx
+2026-05-05 16:16:32,179 [INFO] app: [TEMP SAVE SUCCESS] File=MSA_TCS_STC_DataMigration_2024.docx | Temp Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\1777977992_MSA_TCS_STC_DataMigration_2024.docx
+2026-05-05 16:16:32,246 [INFO] app: [VALIDATION COMPLETE] File=MSA_TCS_STC_DataMigration_2024.docx | Status=VALID | Reason=All checks passed
+2026-05-05 16:16:32,249 [INFO] app: [VALIDATION LOG SAVED] Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary\MSA_TCS_STC_DataMigration_2024.docx_55d69da6-0f67-4931-b3bf-dc7ade7d8c68_validation.log
+2026-05-05 16:16:32,253 [INFO] app: [FILE MOVED] File=MSA_TCS_STC_DataMigration_2024.docx | Final Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777977992_MSA_TCS_STC_DataMigration_2024_20260505_161632.docx
+2026-05-05 16:16:32,263 [INFO] app: [DOC TYPE DETECTED] File=MSA_TCS_STC_DataMigration_2024.docx | Type=MSA
+2026-05-05 16:16:32,364 [INFO] app: [DB SAVE SUCCESS] File ID=79
+2026-05-05 16:16:32,528 [INFO] app: [DB LOG SAVE SUCCESS] Validation logs saved for File ID=79
+2026-05-05 16:16:32,528 [INFO] app: [VALID FILE] File ID=79 | Triggering MSA + Invoice in parallel
+2026-05-05 16:16:32,529 [INFO] app: [BACKGROUND TASK ADDED] File ID=79
+2026-05-05 16:16:32,549 [INFO] app: [PIPELINE START] File ID=79 | Path=C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777977992_MSA_TCS_STC_DataMigration_2024_20260505_161632.docx | DocType=MSA
+2026-05-05 16:16:32,551 [INFO] main: ======================================================================
+2026-05-05 16:16:32,552 [INFO] main: [MSA]  STARTED  |  File ID: 79  |  1777977992_MSA_TCS_STC_DataMigration_2024_20260505_161632.docx
+2026-05-05 16:16:32,553 [INFO] main: ======================================================================
+2026-05-05 16:17:08,679 [INFO] sow_main: [QUEUE] Waiting for processing slot: 1777977991_SOW_TCS_STC_DataMigration_2024_20260505_161631.docx
+2026-05-05 16:17:08,680 [INFO] sow_main: ============================================================
+2026-05-05 16:17:08,681 [INFO] sow_main: SOW EXTRACTION PIPELINE  v4 + Ollama LLM + FAISS
+2026-05-05 16:17:08,681 [INFO] sow_main: File: 1777977991_SOW_TCS_STC_DataMigration_2024_20260505_161631.docx
+2026-05-05 16:17:08,685 [INFO] sow_main: ============================================================
+2026-05-05 16:17:08,685 [INFO] sow_main: [STEP 1] Extracting text from document...
+2026-05-05 16:17:08,686 [INFO] sow_main:   Word document detected
+2026-05-05 16:17:08,739 [INFO] sow_main:   161 paragraphs, 14146 chars extracted
+2026-05-05 16:17:08,741 [INFO] sow_main: [STEP 2] Extracting structured fields (rule-based)...
+2026-05-05 16:17:08,824 [INFO] sow_main:   [OK] sow_id                 SOW-TCS-STC-DM-2024-001
+2026-05-05 16:17:08,825 [INFO] sow_main:   [OK] reference_msa          MSA-TCS-STC-2024-001
+2026-05-05 16:17:08,825 [INFO] sow_main:   [OK] vendor_id              VND-TCS-2024-007
+2026-05-05 16:17:08,825 [INFO] sow_main:   [OK] vendor_name            Tata Consultancy Services Limited (TCS)
+2026-05-05 16:17:08,825 [INFO] sow_main:   [OK] client_name            Saudi Telecom Company (STC)
+2026-05-05 16:17:08,826 [INFO] sow_main:   [OK] project_title          Enterprise Data Migration – STC Core Systems
+2026-05-05 16:17:08,826 [INFO] sow_main:   [OK] start_date             February 01, 2024
+2026-05-05 16:17:08,826 [INFO] sow_main:   [OK] end_date               January 31, 2025
+2026-05-05 16:17:08,826 [INFO] sow_main:   [OK] payment_terms          Net 30 days from milestone invoice receipt
+2026-05-05 16:17:08,826 [INFO] sow_main:   [OK] currency               USD (United States Dollar)
+2026-05-05 16:17:08,827 [INFO] sow_main:   [OK] status                 Active
+2026-05-05 16:17:08,827 [INFO] sow_main:   [OK] total_amount           $950,000
+2026-05-05 16:17:08,827 [INFO] sow_main: [STEP 3] Extracting unstructured fields (rule-based)...
+2026-05-05 16:17:08,845 [INFO] sow_main:   [FOUND    ] service_description        (961 chars)
+2026-05-05 16:17:08,846 [INFO] sow_main:   [FOUND    ] scope_of_work              (342 chars)
+2026-05-05 16:17:08,846 [INFO] sow_main:   [FOUND    ] deliverables               (391 chars)
+2026-05-05 16:17:08,846 [INFO] sow_main:   [FOUND    ] payment_schedule           (514 chars)
+2026-05-05 16:17:08,846 [INFO] sow_main:   [NOT FOUND] resource_requirements      
+2026-05-05 16:17:08,847 [INFO] sow_main:   [FOUND    ] acceptance_criteria        (729 chars)
+2026-05-05 16:17:08,847 [INFO] sow_main:   [FOUND    ] termination_clause         (755 chars)
+2026-05-05 16:17:08,847 [INFO] sow_main:   Rule-based Extraction Rate: 18/19 fields (94.7%)
+2026-05-05 16:17:08,847 [INFO] sow_main: [STEP 4] Enriching with Ollama LLM (llama3)...
+2026-05-05 16:17:14,693 [INFO] msa_main: Processing: C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input\success\1777977992_MSA_TCS_STC_DataMigration_2024_20260505_161632.docx
+2026-05-05 16:17:14,694 [INFO] msa_main: File ID: 79
+2026-05-05 16:17:14,776 [INFO] msa_main: Digital PDF
+2026-05-05 16:17:14,800 [INFO] msa_main: Rule-based extraction done: {'start_date': 'January 01, 2024', 'currency': 'USD', 'created_by': 'Procurement Office, Saudi Telecom Company (STC)', 'termination_clause': "Either party may terminate this Agreement or any SOW for cause\nupon thirty (30) days' written notice if the other party materially\nbreaches this Agreement and fails to cure such breach within such\nperiod. STC may terminate any SOW for convenience upon sixty\n(60) days' written notice.\nUpon termination, each party shall:\nPromptly return or securely destroy all Confidential Information of\nthe other p", 'intellectual_property': 'RIGHTS', 'dispute_resolution': '12.1 Good-Faith Negotiation\nIn the event of any dispute arising out of or relating to this\nAgreement, the parties shall first attempt resolution through good-\nfaith negotiation between senior representatives within thirty (30)\ndays of written notice detailing the nature of the dispute.', 'confidentiality': 'NON-DISCLOSURE TERMS', 'liability_clause': 'LIMITATION OF LIABILITY', 'indemnification_clause': 'Vendor takes full responsibility for any mishap due to their product,\nservice, or personnel.', 'vendor_name': 'Tata Consultancy Services Limited (TCS)', 'vendor_id': 'VND-TCS-2024-007', 'end_date': 'December 31, 2026', 'payment_terms': 'Net 30 days from invoice receipt', 'status': 'Active', 'msa_id': 'msa tcs stc 2024 001 date january 01 2024'}
+2026-05-05 16:19:11,514 [INFO] msa_main: RAW LLM RESPONSE: {
+  "structured": {
+    "vendor_name": "Tata Consultancy Services Limited (TCS)",
+    "vendor_id": "VND-TCS-2024-007",
+    "start_date": "January 01, 2024",
+    "end_date": "December 31, 2026",
+    "currency": "USD",
+    "status": "Active",
+    "created_by": "Procurement Office, Saudi Telecom Company (STC)",
+    "payment_terms": "Net 30 days from invoice receipt",
+    "termination_clause": "Either party may terminate this Agreement or any SOW for cause upon thirty (30) days' written notice if the other party materially breaches this Agreement and fails to cure such breach within such period. STC may terminate any SOW for convenience upon sixty (60) days' written notice.\nUpon termination, each party shall:\nPromptly return or securely destroy all Confidential Information of the other p",
+    "msa_id": "MSA-TCS-STC-2024-001 Date: January 01, 2024"
+  },
+  "unstructured": {
+    "intellectual_property": "",
+    "dispute_resolution": "12.1 Good-Faith Negotiation\nIn the event of any dispute arising out of or relating to this Agreement, the parties shall first attempt resolution through good-faith negotiation between senior representatives within thirty (30) days of written notice detailing the nature of the dispute.",
+    "confidentiality": "NON-DISCLOSURE TERMS",
+    "liability_clause": "",
+    "indemnification_clause": "Vendor takes full responsibility for any mishap due to their product, service, or personnel."
+  }
+}
+2026-05-05 16:19:11,515 [INFO] msa_main: CLEANED DATA: {'structured': {'vendor_name': 'Tata Consultancy Services Limited (TCS)', 'vendor_id': 'VND-TCS-2024-007', 'start_date': 'January 01, 2024', 'end_date': 'December 31, 2026', 'currency': 'USD', 'status': 'Active', 'created_by': 'Procurement Office, Saudi Telecom Company (STC)', 'payment_terms': 'Net 30 days from invoice receipt', 'termination_clause': "Either party may terminate this Agreement or any SOW for cause upon thirty (30) days' written notice if the other party materially breaches this Agreement and fails to cure such breach within such period. STC may terminate any SOW for convenience upon sixty (60) days' written notice.\nUpon termination, each party shall:\nPromptly return or securely destroy all Confidential Information of the other p", 'msa_id': 'MSA-TCS-STC-2024-001 Date: January 01, 2024'}, 'unstructured': {'intellectual_property': '', 'dispute_resolution': '12.1 Good-Faith Negotiation\nIn the event of any dispute arising out of or relating to this Agreement, the parties shall first attempt resolution through good-faith negotiation between senior representatives within thirty (30) days of written notice detailing the nature of the dispute.', 'confidentiality': 'NON-DISCLOSURE TERMS', 'liability_clause': '', 'indemnification_clause': 'Vendor takes full responsibility for any mishap due to their product, service, or personnel.'}}
+2026-05-05 16:19:11,516 [INFO] msa_main: VALIDATED DATA: {'structured': {'vendor_name': 'Tata Consultancy Services Limited (TCS)', 'vendor_id': 'VND-TCS-2024-007', 'start_date': 'January 01, 2024', 'end_date': 'December 31, 2026', 'currency': 'USD', 'status': 'Active', 'created_by': 'Procurement Office, Saudi Telecom Company (STC)', 'payment_terms': 'Net 30 days from invoice receipt', 'termination_clause': "Either party may terminate this Agreement or any SOW for cause upon thirty (30) days' written notice if the other party materially breaches this Agreement and fails to cure such breach within such period. STC may terminate any SOW for convenience upon sixty (60) days' written notice.\nUpon termination, each party shall:\nPromptly return or securely destroy all Confidential Information of the other p", 'msa_id': 'MSA-TCS-STC-2024-001 Date: January 01, 2024'}, 'unstructured': {'intellectual_property': '', 'dispute_resolution': '12.1 Good-Faith Negotiation\nIn the event of any dispute arising out of or relating to this Agreement, the parties shall first attempt resolution through good-faith negotiation between senior representatives within thirty (30) days of written notice detailing the nature of the dispute.', 'confidentiality': 'NON-DISCLOSURE TERMS', 'liability_clause': '', 'indemnification_clause': 'Vendor takes full responsibility for any mishap due to their product, service, or personnel.'}}
+2026-05-05 16:19:11,688 [INFO] msa_main: SUMMARY: [{'document_type': 'MSA', 'field_name': 'vendor_name', 'field_values': 'Tata Consultancy Services Limited (TCS)', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'vendor_id', 'field_values': 'VND-TCS-2024-007', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'start_date', 'field_values': 'January 01, 2024', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'end_date', 'field_values': 'December 31, 2026', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'currency', 'field_values': 'USD', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'status', 'field_values': 'Active', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'created_by', 'field_values': 'Procurement Office, Saudi Telecom Company (STC)', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'payment_terms', 'field_values': 'Net 30 days from invoice receipt', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'termination_clause', 'field_values': "Either party may terminate this Agreement or any SOW for cause upon thirty (30) days' written notice if the other party materially breaches this Agreement and fails to cure such breach within such period. STC may terminate any SOW for convenience upon sixty (60) days' written notice.\nUpon termination, each party shall:\nPromptly return or securely destroy all Confidential Information of the other p", 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'msa_id', 'field_values': 'MSA-TCS-STC-2024-001 Date: January 01, 2024', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'intellectual_property', 'field_values': 'NA', 'field_status': 'Missing'}, {'document_type': 'MSA', 'field_name': 'dispute_resolution', 'field_values': '12.1 Good-Faith Negotiation\nIn the event of any dispute arising out of or relating to this Agreement, the parties shall first attempt resolution through good-faith negotiation between senior representatives within thirty (30) days of written notice detailing the nature of the dispute.', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'confidentiality', 'field_values': 'NON-DISCLOSURE TERMS', 'field_status': 'Valid'}, {'document_type': 'MSA', 'field_name': 'liability_clause', 'field_values': 'NA', 'field_status': 'Missing'}, {'document_type': 'MSA', 'field_name': 'indemnification_clause', 'field_values': 'Vendor takes full responsibility for any mishap due to their product, service, or personnel.', 'field_status': 'Valid'}]
+2026-05-05 16:19:11,788 [INFO] msa_main: [FINAL MATCH STATUS] -> REVIEW_REQUIRED
+2026-05-05 16:19:11,788 [INFO] msa_main: Updated record -> Deactivating old records in both stores
+2026-05-05 16:19:12,427 [INFO] msa_main: Done!
+2026-05-05 16:19:12,428 [INFO] main: ======================================================================
+2026-05-05 16:19:12,428 [INFO] main: [MSA]  COMPLETED in 159.88s  |  File ID: 79  |  1777977992_MSA_TCS_STC_DataMigration_2024_20260505_161632.docx
+2026-05-05 16:19:12,429 [INFO] main: ======================================================================
+2026-05-05 16:19:12,429 [INFO] app: [PIPELINE DONE] MSA | status=success | time=159.88s
+2026-05-05 16:19:12,430 [INFO] app: [PIPELINE SUCCESS] Completed | File ID=79
+2026-05-05 16:19:18,294 [INFO] sow_main:   After LLM Enrichment Rate: 18/19 fields (94.7%)
+2026-05-05 16:19:18,295 [INFO] sow_main: [STEP 4.5] Cleaning extracted fields...
+2026-05-05 16:19:18,295 [INFO] sow_main:   [CLEAN] status -> 'Active'
+2026-05-05 16:19:18,295 [INFO] sow_main: [STEP 5] Running combined match check (Postgres + FAISS)...
+2026-05-05 16:19:18,376 [INFO] sow_main:   [FINAL STATUS] -> DUPLICATE
+2026-05-05 16:19:18,377 [INFO] sow_main:   File REJECTED — identical record exists in both stores.
+2026-05-05 16:19:18,377 [INFO] sow_main:   DONE (DUPLICATE — no changes made)
+2026-05-05 16:19:18,377 [INFO] main: ======================================================================
+2026-05-05 16:19:18,377 [INFO] main: [SOW]  COMPLETED in 166.68s  |  File ID: 78  |  1777977991_SOW_TCS_STC_DataMigration_2024_20260505_161631.docx
+2026-05-05 16:19:18,377 [INFO] main: ======================================================================
+2026-05-05 16:19:18,378 [INFO] app: [PIPELINE DONE] SOW | status=success | time=166.68s
+2026-05-05 16:19:18,378 [INFO] app: [PIPELINE SUCCESS] Completed | File ID=78
+2026-05-05 17:17:15,938 [INFO] app: ----------------------------------------
+2026-05-05 17:17:15,938 [INFO] app: Document Upload Server Started
+2026-05-05 17:17:15,938 [INFO] app: URL      : http://127.0.0.1:8000
+2026-05-05 17:17:15,938 [INFO] app: Backend  : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\backend
+2026-05-05 17:17:15,938 [INFO] app: Input    : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\input
+2026-05-05 17:17:15,938 [INFO] app: Temp     : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\summary
+2026-05-05 17:17:15,938 [INFO] app: Logs     : C:\Users\ws_htu769\Desktop\P2P\final_integerated_code\frontend\logs
+2026-05-05 17:17:15,938 [INFO] app: Pipeline : MSA + Invoice (parallel via backend/main.py)
+2026-05-05 17:17:15,941 [INFO] app: Ready.
+2026-05-05 17:17:15,941 [INFO] app: ----------------------------------------

@@ -1,0 +1,35 @@
+Invoice Decision Log
+==================================================
+Invoice   : INV-001
+File ID   : 664
+Timestamp : 20260514_155045
+Verdict   : REJECTED
+Confidence: 100%
+Summary   : SOW_INACTIVE: SOW 'SOW-TCS-STC-DM-2024-001' status='Active' end=2025-01-31.
+==================================================
+Rejection Reasons (1):
+  1. [SOW_INACTIVE] sow_id = SOW-TCS-STC-DM-2024-001
+     SOW 'SOW-TCS-STC-DM-2024-001' status='Active' end=2025-01-31.
+==================================================
+Signals:
+  po_found                 : True
+  po_status                : APPROVED - ISSUED
+  po_date_valid            : True
+  amount_within_po         : True
+  vendor_match             : True
+  pr_found                 : False
+  pr_status                : None
+  msa_found                : True
+  msa_status               : Active
+  msa_valid                : True
+  sow_found                : True
+  sow_status               : Active
+  amount_within_sow        : True
+  client_name              : not provided
+  grn_reference            : GRN-001
+  msa_reference            : MSA-TCS-STC-2024-001
+  sow_reference            : SOW-TCS-STC-DM-2024-001
+  po_reference             : PO-STC-IT-2024-0047
+  vendor_name              : tata consultancy services ltd. (tcs)
+  po_links_msa             : MSA-TCS-STC-2024-001
+  po_links_sow             : SOW-TCS-STC-DM-2024-001

@@ -1,0 +1,28 @@
+Invoice Decision Log
+==================================================
+Invoice   : INV-001
+File ID   : 558
+Timestamp : 20260513_154741
+Verdict   : REJECTED
+Confidence: 100%
+Summary   : DUPLICATE_INVOICE: Invoice 'INV-001' already exists in invoice_dataset (active_flag=1).
+==================================================
+Rejection Reasons (1):
+  1. [DUPLICATE_INVOICE] invoice_number = INV-001
+     Invoice 'INV-001' already exists in invoice_dataset (active_flag=1).
+==================================================
+Signals:
+  is_duplicate             : True
+  po_found                 : True
+  po_status                : APPROVED - ISSUED
+  po_date_valid            : True
+  amount_within_po         : True
+  vendor_match             : False
+  pr_found                 : False
+  pr_status                : None
+  msa_found                : True
+  msa_status               : Active
+  msa_valid                : True
+  sow_found                : False
+  sow_status               : None
+  amount_within_sow        : False
