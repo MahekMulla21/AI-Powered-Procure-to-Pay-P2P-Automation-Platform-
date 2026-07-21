@@ -5,3 +5,4 @@ pillow
 pytesseract
 pdfplumber
 python-docx
+psycopg2-binary
