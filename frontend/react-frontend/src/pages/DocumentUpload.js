@@ -129,11 +129,6 @@ const DocumentUpload = () => {
       type,
       time: new Date().toLocaleTimeString(),
     };
-
-    setLiveLogs((prev) => ({
-      ...prev,
-      [filename]: [...(prev[filename] || []), log],
-    }));
   };
 
   // =========================
@@ -199,7 +194,6 @@ const DocumentUpload = () => {
     setSelectedFiles([]);
     setFilePipelines({});
     setActiveFile(null);
-    setLiveLogs({});
     setToasts([]);
     setFinalStatus({});
   };
