@@ -86,8 +86,6 @@ const DocumentUpload = () => {
 
   const [activeFile, setActiveFile] = useState(null);
 
-  const [liveLogs, setLiveLogs] = useState({});
-
   // FINAL RESULT
   const [finalStatus, setFinalStatus] = useState({});
 
