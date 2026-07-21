@@ -5,7 +5,7 @@ import "./DocumentUpload.css";
 // =========================
 // API BASE URL
 // =========================
-const API_URL =
+const API_BASE =
   "https://ai-powered-procure-to-pay-p2p-automation-swbi.onrender.com";
 
 // =========================
