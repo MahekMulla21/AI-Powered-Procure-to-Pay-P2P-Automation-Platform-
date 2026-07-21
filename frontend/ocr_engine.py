@@ -3,9 +3,11 @@ from PIL import Image
 import pytesseract
 import docx
 import pytesseract
+import os
 
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-
+if os.name == "nt":  # Only for Windows
+    pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+    
 def extract_text(file_path):
     text = ""
 

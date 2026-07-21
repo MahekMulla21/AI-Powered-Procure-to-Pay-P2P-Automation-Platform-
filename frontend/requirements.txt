@@ -1,7 +1,5 @@
-python-docx
-pdfplumber
-docx
-psycopg2
 fastapi
 uvicorn
 python-multipart
+pillow
+pytesseract
