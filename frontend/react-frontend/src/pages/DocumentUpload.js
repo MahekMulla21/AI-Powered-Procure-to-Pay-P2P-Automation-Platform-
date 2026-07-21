@@ -123,12 +123,7 @@ const DocumentUpload = () => {
   // LIVE LOGS
   // =========================
   const addLog = (filename, message, type = "info") => {
-    const log = {
-      id: Date.now() + Math.random(),
-      message,
-      type,
-      time: new Date().toLocaleTimeString(),
-    };
+    console.log(`[${filename}] ${type.toUpperCase()}: ${message}`);
   };
 
   // =========================
